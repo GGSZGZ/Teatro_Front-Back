@@ -1,50 +1,9 @@
-html {
-  font-size: 20px;
-}
-body {
-  margin: 0;
-  line-height: normal;
-}
-
-:root {
-  /* fonts */
-  --font-gentium-basic: "Gentium Basic";
-  --font-lobster: Lobster;
-  --text-single-200-regular: "DM Sans";
-  --font-playfair-display: "Playfair Display";
-
-  /* font sizes */
-  --font-size-xl: 1rem;
-  --font-size-25xl: 2.2rem;
-  --text-single-200-regular-size: 0.9rem;
-  --font-size-9xl: 1.4rem;
-  --font-size-5xl: 1.2rem;
-
-  /* Colors */
-  --color-maroon: #8f1515;
-  --neutral-colors-white: #fff;
-  --color-darkgoldenrod: #cc9936;
-  --neutral-colors-color-600: #d4d2e3;
-  --neutral-colors-text-gray: #9795b5;
-  --color-gray: #0b032b;
-  --color-goldenrod: #e0c540;
-  --neutral-colors-headings-black: #5d5a88;
-
-  /* Gaps */
-  --gap-7xs: 0.3rem;
-
-  /* Border radiuses */
-  --br-5xs: 8px;
-  --br-5xl: 24px;
-  --br-xl: 20px;
-}
-
 .about,
 .home {
   margin: 0;
   position: relative;
   font-size: inherit;
-  line-height: 0.9rem;
+  line-height: 18px;
   font-weight: 400;
   font-family: inherit;
 }
@@ -54,13 +13,13 @@ body {
 .sections {
   margin: 0;
   position: absolute;
-  top: 2.3rem;
-  right: 9.8rem;
+  top: 46px;
+  right: 196px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  gap: 1.65rem;
+  gap: var(--gap-14xl);
   text-align: center;
   font-size: var(--font-size-9xl);
   color: var(--neutral-colors-headings-black);
@@ -68,24 +27,24 @@ body {
 }
 .secondary-cricle-button {
   position: absolute;
-  top: 1.35rem;
-  left: 67.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
+  top: 27px;
+  left: 1350px;
+  width: 50px;
+  height: 50px;
 }
+.busqueda-1-icon,
 .headers-v12-child {
   position: absolute;
-  top: 5.44rem;
+  top: 108.7px;
   left: 0;
-  width: 72rem;
-  height: 0.07rem;
+  width: 1440px;
+  height: 1.3px;
 }
 .busqueda-1-icon {
-  position: absolute;
-  top: 1.95rem;
-  left: 68.1rem;
-  width: 1.25rem;
-  height: 1.25rem;
+  top: 39px;
+  left: 1362px;
+  width: 25px;
+  height: 25px;
   object-fit: cover;
 }
 .headers-v12 {
@@ -93,61 +52,61 @@ body {
   top: 0;
   left: 0;
   background-color: var(--neutral-colors-white);
-  width: 72rem;
-  height: 5.5rem;
+  width: 1440px;
+  height: 110px;
 }
 .heading,
 .heading1 {
   margin: 0;
   position: absolute;
-  top: 7.35rem;
-  left: 31.65rem;
+  top: 147px;
+  left: 633px;
   font-size: inherit;
-  line-height: 2.3rem;
+  line-height: 46px;
   font-weight: 400;
   font-family: inherit;
 }
 .heading1 {
-  top: 33.9rem;
-  left: 5.2rem;
+  top: 678px;
+  left: 104px;
 }
 .card-heading,
 .paragraph {
   position: absolute;
-  left: 1.2rem;
+  left: 24px;
   display: inline-block;
 }
 .card-heading {
   margin: 0;
-  top: 13.4rem;
+  top: 268px;
   font-size: var(--font-size-9xl);
-  line-height: 1.7rem;
+  line-height: 34px;
   font-weight: 700;
   font-family: var(--font-playfair-display);
-  width: 16.2rem;
+  width: 324px;
 }
 .paragraph {
-  top: 15.7rem;
-  line-height: 1.5rem;
+  top: 314px;
+  line-height: 30px;
   color: var(--color-gray);
-  width: 17.03rem;
+  width: 340.6px;
 }
 .line-roundedpassword-icon {
   position: relative;
-  width: 1rem;
-  height: 1rem;
+  width: 20px;
+  height: 20px;
   overflow: hidden;
   flex-shrink: 0;
   display: none;
 }
 .learn-more {
   position: relative;
-  line-height: 0.9rem;
+  line-height: 18px;
 }
 .line-roundedarrow-right {
   position: relative;
-  width: 1rem;
-  height: 1rem;
+  width: 20px;
+  height: 20px;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -163,19 +122,19 @@ body {
 }
 .link {
   position: absolute;
-  top: 21.8rem;
-  left: 1.2rem;
+  top: 436px;
+  left: 24px;
   align-items: flex-start;
   text-align: center;
   color: var(--color-darkgoldenrod);
 }
 .image-26-icon {
   position: absolute;
-  top: 0.65rem;
-  left: 5.2rem;
+  top: 13px;
+  left: 104px;
   border-radius: var(--br-xl);
-  width: 9.15rem;
-  height: 12.15rem;
+  width: 183px;
+  height: 243px;
   object-fit: cover;
 }
 .card {
@@ -186,133 +145,133 @@ body {
   background-color: var(--neutral-colors-white);
   border: 1px solid var(--neutral-colors-color-600);
   box-sizing: border-box;
-  width: 19.59rem;
-  height: 25.3rem;
+  width: 391.8px;
+  height: 506px;
 }
 .card-heading1 {
   position: absolute;
-  top: 13.4rem;
-  left: 1.2rem;
-  font-size: var(--font-size-5xl);
-  line-height: 1.7rem;
+  top: 268px;
+  left: 24px;
+  font-size: var(--headings-h3-size);
+  line-height: 34px;
   display: inline-block;
   font-family: var(--font-playfair-display);
-  width: 16.2rem;
+  width: 324px;
 }
 .image-29-icon {
   position: absolute;
-  top: 1.2rem;
-  left: 2.2rem;
+  top: 24px;
+  left: 44px;
   border-radius: var(--br-xl);
-  width: 15rem;
-  height: 10.53rem;
+  width: 300px;
+  height: 210.5px;
   object-fit: cover;
 }
 .card1 {
   position: absolute;
-  top: 26.5rem;
+  top: 530px;
   left: 0;
   border-radius: var(--br-5xl);
   background-color: var(--neutral-colors-white);
   border: 1px solid var(--neutral-colors-color-600);
   box-sizing: border-box;
-  width: 19.59rem;
-  height: 25.3rem;
+  width: 391.8px;
+  height: 506px;
 }
 .image-30-icon {
   position: absolute;
-  top: 1.2rem;
-  left: 1.75rem;
+  top: 24px;
+  left: 34.9px;
   border-radius: var(--br-xl);
-  width: 16.1rem;
-  height: 10.55rem;
+  width: 322px;
+  height: 211px;
   object-fit: cover;
 }
 .card2 {
   position: absolute;
-  top: 26.5rem;
-  left: 20.71rem;
+  top: 530px;
+  left: 414.1px;
   border-radius: var(--br-5xl);
   background-color: var(--neutral-colors-white);
   border: 1px solid var(--neutral-colors-color-600);
   box-sizing: border-box;
-  width: 19.59rem;
-  height: 25.3rem;
+  width: 391.8px;
+  height: 506px;
 }
 .image-31-icon {
   position: absolute;
-  top: 1rem;
-  left: 3.64rem;
+  top: 20px;
+  left: 72.8px;
   border-radius: var(--br-xl);
-  width: 11.5rem;
-  height: 11.65rem;
+  width: 230px;
+  height: 233px;
   object-fit: cover;
 }
 .card3 {
   position: absolute;
-  top: 26.5rem;
-  left: 41.41rem;
+  top: 530px;
+  left: 828.2px;
   border-radius: var(--br-5xl);
   background-color: var(--neutral-colors-white);
   border: 1px solid var(--neutral-colors-color-600);
   box-sizing: border-box;
-  width: 19.59rem;
-  height: 25.3rem;
+  width: 391.8px;
+  height: 506px;
 }
 .image-27-icon {
   position: absolute;
-  top: 1.8rem;
-  left: 2.19rem;
+  top: 36px;
+  left: 43.9px;
   border-radius: var(--br-xl);
-  width: 15rem;
-  height: 9.79rem;
+  width: 300px;
+  height: 195.7px;
   object-fit: cover;
 }
 .card4 {
   position: absolute;
   top: 0;
-  left: 20.71rem;
+  left: 414.1px;
   border-radius: var(--br-5xl);
   background-color: var(--neutral-colors-white);
   border: 1px solid var(--neutral-colors-color-600);
   box-sizing: border-box;
-  width: 19.59rem;
-  height: 25.3rem;
+  width: 391.8px;
+  height: 506px;
 }
 .image-28-icon {
   position: absolute;
-  top: 1.8rem;
-  left: 2.26rem;
+  top: 36px;
+  left: 45.3px;
   border-radius: var(--br-xl);
-  width: 15rem;
-  height: 10.03rem;
+  width: 300px;
+  height: 200.6px;
   object-fit: cover;
 }
 .card5 {
   position: absolute;
   top: 0;
-  left: 41.34rem;
+  left: 826.7px;
   border-radius: var(--br-5xl);
   background-color: var(--neutral-colors-white);
   border: 1px solid var(--neutral-colors-color-600);
   box-sizing: border-box;
-  width: 19.59rem;
-  height: 25.3rem;
+  width: 391.8px;
+  height: 506px;
 }
-.grip-cards {
-  position: absolute;
-  top: 52.8rem;
-  left: 0;
-  width: 61rem;
-  height: 51.8rem;
-}
+.grip-cards,
 .image-13-icon {
   position: absolute;
-  top: 1.2rem;
-  left: 0.9rem;
+  top: 1056px;
+  left: 0;
+  width: 1220px;
+  height: 1036px;
+}
+.image-13-icon {
+  top: 24px;
+  left: 18px;
   border-radius: var(--br-xl);
-  width: 17.65rem;
-  height: 11rem;
+  width: 353px;
+  height: 220px;
   object-fit: cover;
 }
 .image-21-icon,
@@ -321,57 +280,55 @@ body {
 .image-24-icon,
 .image-25-icon {
   position: absolute;
-  top: 1.7rem;
-  left: 2.4rem;
+  top: 34px;
+  left: 48px;
   border-radius: var(--br-xl);
-  width: 15rem;
-  height: 10rem;
+  width: 300px;
+  height: 200px;
   object-fit: cover;
 }
 .image-21-icon,
 .image-22-icon,
 .image-24-icon,
 .image-25-icon {
-  top: 1.05rem;
-  left: 2.55rem;
-  width: 14.55rem;
-  height: 11.3rem;
+  top: 21px;
+  left: 50.9px;
+  width: 291px;
+  height: 226px;
 }
 .image-21-icon,
 .image-22-icon,
 .image-25-icon {
-  top: 1.4rem;
-  left: 2.39rem;
-  width: 15rem;
-  height: 10.62rem;
+  top: 28px;
+  left: 47.8px;
+  width: 300px;
+  height: 212.4px;
 }
 .image-21-icon,
 .image-22-icon {
-  top: 1.5rem;
-  left: 2rem;
-  width: 16rem;
-  height: 10.45rem;
+  top: 30px;
+  left: 39.9px;
+  width: 320px;
+  height: 209px;
 }
 .image-21-icon {
-  top: 1.2rem;
-  left: 4.26rem;
-  width: 11.1rem;
-  height: 11.1rem;
+  top: 24px;
+  left: 85.3px;
+  width: 222px;
+  height: 222px;
 }
 .grip,
 .grip-cards1 {
   position: absolute;
-  width: 61rem;
-}
-.grip-cards1 {
   top: 0;
   left: 0;
-  height: 51.8rem;
+  width: 1220px;
+  height: 1036px;
 }
 .grip {
-  top: 39.2rem;
-  left: 5.5rem;
-  height: 104.6rem;
+  top: 784px;
+  left: 110px;
+  height: 2092px;
   cursor: pointer;
   text-align: left;
   font-size: var(--font-size-xl);
@@ -380,10 +337,10 @@ body {
 }
 .captura-de-pantalla-2023-11-12 {
   position: absolute;
-  top: 149.6rem;
-  left: 6.3rem;
-  width: 61.3rem;
-  height: 39.7rem;
+  top: 2992px;
+  left: 126px;
+  width: 1226px;
+  height: 794px;
   background-image: url(./public/capturadepantalla202311121324111@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -393,29 +350,27 @@ body {
 .logosolo-texto-1 {
   position: absolute;
   top: 0;
+  left: 0;
+  width: 143px;
+  height: 110px;
   object-fit: cover;
 }
-.logo-1-icon {
-  left: 0;
-  width: 7.15rem;
-  height: 5.5rem;
-}
 .logosolo-texto-1 {
-  left: 7.15rem;
-  width: 15.75rem;
-  height: 5.45rem;
+  left: 143px;
+  width: 315px;
+  height: 109px;
 }
 .logo {
   position: absolute;
   top: 0;
   left: 0;
-  width: 22.9rem;
-  height: 5.5rem;
+  width: 458px;
+  height: 110px;
 }
 .home-1-icon {
   position: relative;
-  width: 1.66rem;
-  height: 1.6rem;
+  width: 33.1px;
+  height: 32px;
   object-fit: cover;
 }
 .link12 {
@@ -424,15 +379,24 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
 }
-.informacion-1-icon,
-.telefono-1-icon {
+.informacion-1-icon {
   position: relative;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 32px;
+  height: 32px;
   object-fit: cover;
 }
+.link13 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  cursor: pointer;
+}
 .telefono-1-icon {
-  height: 1.53rem;
+  position: relative;
+  width: 32px;
+  height: 30.6px;
+  object-fit: cover;
 }
 .nav-list {
   position: absolute;
@@ -442,37 +406,37 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: var(--gap-21xl);
 }
 .copyright {
   position: absolute;
-  top: 1.6rem;
-  left: 19.2rem;
-  line-height: 0.9rem;
+  top: 32px;
+  left: 384px;
+  line-height: 18px;
 }
 .divider {
   position: absolute;
-  top: -0.02rem;
-  left: -0.02rem;
+  top: -0.5px;
+  left: -0.5px;
   border-top: 1px solid var(--neutral-colors-color-600);
   box-sizing: border-box;
-  width: 61.05rem;
-  height: 0.05rem;
+  width: 1221px;
+  height: 1px;
 }
 .footer-botom {
   position: absolute;
-  top: 9.5rem;
-  left: 5.5rem;
-  width: 61rem;
-  height: 2.5rem;
+  top: 190px;
+  left: 110px;
+  width: 1220px;
+  height: 50px;
   font-size: var(--text-single-200-regular-size);
   font-family: var(--text-single-200-regular);
 }
 .wrapper-child {
   top: 0;
   left: 0;
-  width: 72rem;
-  height: 0.04rem;
+  width: 1440px;
+  height: 0.8px;
 }
 .logo1,
 .wrapper,
@@ -483,14 +447,14 @@ body {
   top: 0;
   left: 0;
   background-color: var(--neutral-colors-white);
-  width: 72rem;
-  height: 14.2rem;
+  width: 1440px;
+  height: 284px;
 }
 .logo1 {
-  top: 2.85rem;
-  left: 0.55rem;
-  width: 22.9rem;
-  height: 5.5rem;
+  top: 57px;
+  left: 11px;
+  width: 458px;
+  height: 110px;
 }
 .social-media-icon {
   position: absolute;
@@ -524,24 +488,24 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 36px;
+  height: 36px;
   cursor: pointer;
 }
 .instagram-icon {
   position: relative;
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 18px;
+  height: 18px;
 }
 .social-media-icon-squareinsta {
   position: relative;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 36px;
+  height: 36px;
 }
 .social-media-container {
   position: absolute;
   top: 0;
-  left: 3.8rem;
+  left: 76px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -563,25 +527,25 @@ body {
 .social-media-icon-square1 {
   position: absolute;
   top: 0;
-  left: 7.55rem;
-  width: 1.8rem;
-  height: 1.8rem;
+  left: 151px;
+  width: 36px;
+  height: 36px;
   cursor: pointer;
 }
+.footers-v10,
 .social-media {
   position: absolute;
-  top: 4.1rem;
-  left: 55.25rem;
-  width: 9.35rem;
-  height: 1.8rem;
+  top: 82px;
+  left: 1105px;
+  width: 187px;
+  height: 36px;
 }
 .footers-v10 {
-  position: absolute;
-  top: 197.55rem;
+  top: 3951px;
   left: 0;
   background-color: var(--neutral-colors-white);
-  width: 72rem;
-  height: 14.2rem;
+  width: 1440px;
+  height: 284px;
   overflow: hidden;
   text-align: center;
   font-size: var(--font-size-9xl);
@@ -594,10 +558,10 @@ body {
 .actualmente {
   margin: 0;
   position: absolute;
-  top: 18.2rem;
-  left: 10rem;
+  top: 364px;
+  left: 200px;
   font-size: inherit;
-  line-height: 2.3rem;
+  line-height: 46px;
   font-weight: 400;
   font-family: inherit;
   color: var(--neutral-colors-white);
@@ -639,19 +603,20 @@ body {
 }
 .no-te-lo {
   position: absolute;
-  top: 4.1rem;
-  left: 19.35rem;
-  line-height: 2.3rem;
+  top: 82px;
+  left: 387px;
+  line-height: 46px;
   display: inline-block;
-  width: 14.3rem;
-  height: 13.8rem;
+  width: 286px;
+  height: 276px;
 }
 .carrusel {
   position: absolute;
-  top: 11.2rem;
-  left: 29rem;
-  width: 33.65rem;
-  height: 20.95rem;
+  top: 224px;
+  left: 580px;
+  width: 673px;
+  height: 419px;
+  cursor: pointer;
   font-size: var(--font-size-xl);
   color: var(--neutral-colors-white);
   font-family: var(--font-gentium-basic);
@@ -660,7 +625,7 @@ body {
   position: relative;
   background-color: var(--color-maroon);
   width: 100%;
-  height: 211.75rem;
+  height: 4235px;
   overflow: hidden;
   text-align: center;
   font-size: var(--font-size-25xl);

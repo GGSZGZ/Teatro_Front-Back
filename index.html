@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./index.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@400;600;700&display=swap"
     />
     <link
       rel="stylesheet"
@@ -18,7 +20,11 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=DM Sans:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM Sans:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@700&display=swap"
     />
   </head>
   <body>
@@ -365,7 +371,7 @@
                 />
               </div>
             </div>
-            <div class="link12">
+            <div class="link13" id="linkContainer13">
               <div class="master-link">
                 <img
                   class="informacion-1-icon"
@@ -381,7 +387,7 @@
                 />
               </div>
             </div>
-            <div class="link12">
+            <div class="link13" id="linkContainer14">
               <div class="master-link">
                 <img
                   class="telefono-1-icon"
@@ -436,7 +442,7 @@
         <p class="los-ms">LOS MÁS</p>
         <p class="los-ms">POPULARES</p>
       </h1>
-      <div class="carrusel">
+      <div class="carrusel" id="carrusel">
         <img class="image-7-icon" alt="" src="./public/image-7@2x.png" />
 
         <img class="dots-icon" alt="" src="./public/dots.svg" />
@@ -459,21 +465,35 @@
       var about = document.getElementById("about");
       if (about) {
         about.addEventListener("click", function (e) {
-          // Please sync "Desktop - About Us" to the project
+          window.location.href = "./desktop-about-us.html";
         });
       }
       
       var contact = document.getElementById("contact");
       if (contact) {
         contact.addEventListener("click", function (e) {
-          // Please sync "Desktop - Contactos" to the project
+          window.location.href = "./desktop-contactos.html";
         });
       }
       
       var grip = document.getElementById("grip");
       if (grip) {
         grip.addEventListener("click", function (e) {
-          // Please sync "Desktop - Obra" to the project
+          window.location.href = "./desktop-obra.html";
+        });
+      }
+      
+      var linkContainer13 = document.getElementById("linkContainer13");
+      if (linkContainer13) {
+        linkContainer13.addEventListener("click", function (e) {
+          window.location.href = "./desktop-about-us.html";
+        });
+      }
+      
+      var linkContainer14 = document.getElementById("linkContainer14");
+      if (linkContainer14) {
+        linkContainer14.addEventListener("click", function (e) {
+          window.location.href = "./desktop-contactos.html";
         });
       }
       
@@ -495,6 +515,13 @@
       if (socialMediaIconSquare1) {
         socialMediaIconSquare1.addEventListener("click", function () {
           window.open("https://twitter.com/");
+        });
+      }
+      
+      var carrusel = document.getElementById("carrusel");
+      if (carrusel) {
+        carrusel.addEventListener("click", function (e) {
+          window.location.href = "./desktop-obra.html";
         });
       }
       </script>
