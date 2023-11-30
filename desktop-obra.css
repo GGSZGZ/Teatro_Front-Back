@@ -26,20 +26,7 @@
   color: var(--neutral-colors-headings-black);
   font-family: var(--font-playfair-display);
 }
-.secondary-cricle-button2 {
-  position: absolute;
-  top: 27px;
-  left: 1350px;
-  width: 50px;
-  height: 50px;
-}
-.headers-v12-inner {
-  position: absolute;
-  top: 108.7px;
-  left: 0;
-  width: 1440px;
-  height: 1.3px;
-}
+
 .busqueda-1-icon2,
 .logo-1-icon4,
 .logosolo-texto-14 {
