@@ -211,6 +211,9 @@
 .button-comprar:hover {
   color: var(--color-darkgoldenrod);
 }
+.button-cancelar:hover{
+  color: var(--color-maroon);
+}
 .compra-realizada1,
 .compra-realizada2 {
   position: absolute;
@@ -585,7 +588,7 @@
   top: 969px;
   left: 46px;
   width: 1348px;
-  height: 1055.5px;
+  height: 375px;
   text-align: left;
   color: var(--color-gray);
 }
