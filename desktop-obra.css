@@ -478,6 +478,9 @@
   text-align: left;
   display: none;
 }
+.button-text5:hover{
+  background-color: #CC9936;
+}
 .master-primary-button4 {
   position: absolute;
   height: 100%;
@@ -508,6 +511,9 @@
   color: var(--neutral-colors-white);
   text-align: left;
   display: inline-block;
+}
+.seleccionar:hover{
+  color:#CC9936;
 }
 .button-seleccionar,
 .button-seleccionar1,
@@ -817,11 +823,17 @@
   flex-shrink: 0;
   display: none;
 }
-.button-text12 {
+.button-comprar, .button-cancelar {
   position: relative;
   letter-spacing: 0.1em;
   line-height: 26px;
   text-transform: uppercase;
+}
+.button-comprar:hover{
+  color: #CC9936;
+}
+.button-cancelar:hover{
+  color: #8F1515;
 }
 .master-primary-button10,
 .master-primary-button9 {

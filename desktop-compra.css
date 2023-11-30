@@ -202,13 +202,13 @@
   flex-shrink: 0;
   display: none;
 }
-.button-text8 {
+.button-comprar, .button-cancelar {
   position: relative;
   letter-spacing: 0.1em;
   line-height: 26px;
   text-transform: uppercase;
 }
-.button-text8:hover {
+.button-comprar:hover {
   color: var(--color-darkgoldenrod);
 }
 .compra-realizada1,
@@ -232,6 +232,9 @@
   font-size: var(--font-size-9xl);
   color: var(--neutral-colors-white);
   font-family: var(--font-playfair-display);
+}
+.compra-realizada1:hover{
+  color: var(--color-darkgoldenrod);
 }
 .compra-realizada2 {
   left: 1046px;

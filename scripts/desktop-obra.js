@@ -21,7 +21,7 @@ function addPopupClickEvent(buttonId) {
       if (popupStyle) {
         popupStyle.display = "flex";
         popupStyle.zIndex = 100;
-        popupStyle.backgroundColor = "";
+        popupStyle.backgroundColor = "rgba(128, 128, 128, 0.7)";
         popupStyle.alignItems = "center";
         popupStyle.justifyContent = "center";
       }
