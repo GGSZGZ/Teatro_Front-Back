@@ -9,6 +9,12 @@ body {
   position: fixed;
   inset: 0;
 }
+.header-line-hr {
+  position: absolute;
+  top: 88px;
+  width: 120%;
+  border-color: var(--color-black);
+}
 
 :root {
   /* fonts */
