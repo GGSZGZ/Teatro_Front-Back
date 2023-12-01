@@ -132,7 +132,7 @@
   background-color: var(--color-maroon);
   height: 433px;
 }
-.carlos-martn-director,
+.director-text,
 .director1 {
   position: absolute;
   display: inline-block;
@@ -148,7 +148,7 @@
   width: 216px;
   height: 74px;
 }
-.carlos-martn-director {
+.director-text {
   top: 132px;
   left: 550px;
   font-size: var(--font-size-xl);
@@ -159,7 +159,7 @@
   width: 733px;
   height: 322px;
 }
-.image-14-icon {
+.image-director {
   position: absolute;
   top: 130px;
   left: 113px;
@@ -179,7 +179,7 @@
   color: var(--color-goldenrod);
   font-family: var(--font-lobster);
 }
-.image-13-icon1 {
+.image-obra {
   position: absolute;
   height: 11.64%;
   width: 42.22%;
@@ -193,7 +193,7 @@
   max-height: 100%;
   object-fit: cover;
 }
-.container3 {
+.container_gender {
   position: absolute;
   top: 0;
   left: 0;
@@ -201,7 +201,7 @@
   width: 1440px;
   height: 450px;
 }
-.heading3 {
+.heading_gender {
   margin: 0;
   position: absolute;
   width: 17.97%;
@@ -214,13 +214,13 @@
   color: var(--color-goldenrod);
   display: inline-block;
 }
-.paragraph12,
+.paragraph_gender,
 .romeo-y-julieta {
   position: absolute;
   line-height: 36px;
   display: inline-block;
 }
-.paragraph12 {
+.paragraph_gender {
   width: 17.97%;
   top: calc(50% - 23px);
   left: 7.58%;
@@ -305,7 +305,7 @@
   height: 297px;
 }
 .same-gender,
-.wrapper2 {
+.gender {
   position: absolute;
   top: 102px;
   left: 489px;
@@ -315,7 +315,7 @@
   font-size: var(--font-size-9xl);
   font-family: var(--font-playfair-display);
 }
-.wrapper2 {
+.gender {
   top: 2748px;
   left: 0;
   width: 1440px;
