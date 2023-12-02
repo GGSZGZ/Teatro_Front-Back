@@ -236,9 +236,6 @@
   color: var(--neutral-colors-white);
   font-family: var(--font-playfair-display);
 }
-.compra-realizada1:hover{
-  color: var(--color-darkgoldenrod);
-}
 .compra-realizada2 {
   left: 1046px;
   background-color: var(--color-maroon);
