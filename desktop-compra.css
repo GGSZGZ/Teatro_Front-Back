@@ -1,54 +1,59 @@
-.heading4,
-.sinopsi1 {
+.title-compra{
+  top: 30%;
+  left: 40%;
   position: absolute;
-  top: 172px;
-  left: 528px;
   font-size: var(--font-size-25xl);
-  line-height: 66px;
   font-family: var(--font-lobster);
+
 }
-.sinopsi1 {
+.title-form {
+  font-size: var(--font-size-25xl);
+  font-family: var(--font-lobster);
+  position: absolute;
   top: 1363px;
-  left: 67px;
+  left: 10%;
   line-height: 46px;
   display: inline-block;
   width: 1302px;
   height: 77px;
 }
-.container5,
-.container6,
-.container7 {
+
+.background-form {
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--neutral-colors-white);
-  width: 1440px;
-  height: 781px;
-}
-.container6,
-.container7 {
-  border-radius: var(--br-6xl);
-  background-color: var(--color-maroon);
-  width: 1305px;
-  height: 629px;
-}
-.container7 {
   top: 24px;
   left: 28px;
   background-color: var(--color-darkgoldenrod);
   width: 1244px;
   height: 573px;
+  border-radius: var(--br-6xl);
 }
-.container-icon {
+.marco-form{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-6xl);
+  background-color: var(--color-maroon);
+  width: 1305px;
+  height: 629px;
+}
+
+.container-mark-right {
   position: absolute;
   top: 44px;
   left: 1035.5px;
   width: 214.5px;
   height: 274.5px;
 }
-.input4,
-.input5,
-.input6 {
+.container-mark-left {
+  position: absolute;
+  top: 778px;
+  left: 75px;
+  width: 205px;
+  height: 277.5px;
+}
+.nombre,
+.correo,
+.telefono {
   position: absolute;
   height: 9.06%;
   width: 21.46%;
@@ -59,27 +64,17 @@
   border-radius: var(--br-31xl);
   background-color: var(--color-whitesmoke-200);
 }
-.input5,
-.input6 {
+.correo,
+.telefono {
   top: 23.53%;
   bottom: 67.41%;
 }
-.input6 {
+.telefono {
   top: 37.2%;
   bottom: 53.74%;
 }
-.input-icon-left4 {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  overflow: hidden;
-  flex-shrink: 0;
-  display: none;
-}
-.input-placeholder4 {
-  position: relative;
-  line-height: 18px;
-}
+
+
 .input-left4,
 .input-left5,
 .input-left6 {
@@ -103,15 +98,14 @@
   top: calc(50% - 63px);
   width: 306.4px;
 }
-.form-wrapper1 {
+.form-box {
   position: absolute;
   top: 30px;
   left: 68px;
   width: 1305px;
   height: 629px;
 }
-.input7,
-.wrapper4 {
+.input7 {
   position: absolute;
   top: 0;
   left: 0;
@@ -279,14 +273,11 @@
 .edificio-2-icon {
   top: 190px;
 }
-.contact-v18,
-.container8 {
+
+.form {
   position: absolute;
-  left: 0;
   background-color: var(--neutral-colors-white);
   width: 1440px;
-}
-.contact-v18 {
   top: 1416px;
   height: 781px;
   overflow: hidden;
@@ -295,41 +286,38 @@
   color: var(--neutral-colors-color-900);
   font-family: var(--text-single-200-regular);
 }
-.container8 {
-  top: 0;
-  height: 284px;
-}
-.home-1-icon3 {
+
+.home-icon {
   position: relative;
   width: 33.1px;
   height: 32px;
   object-fit: cover;
 }
-.link21,
-.master-link21 {
+.link,
+.master-link {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
-.master-link21 {
+.master-link {
   align-items: center;
   gap: var(--gap-7xs);
 }
-.link21 {
-  align-items: flex-start;
+.link {
+  
   cursor: pointer;
 }
-.informacion-1-icon3,
-.telefono-1-icon3 {
+.informacion-icon,
+.telefono-icon {
   position: relative;
   width: 32px;
   height: 32px;
   object-fit: cover;
 }
-.telefono-1-icon3 {
+.telefono-icon {
   height: 30.6px;
 }
-.nav-list3 {
+.nav-list {
   position: absolute;
   top: calc(50% - 63.6px);
   left: calc(50% - 222.6px);
@@ -339,22 +327,20 @@
   justify-content: center;
   gap: var(--gap-21xl);
 }
-.copyright3 {
+.copyright-text {
   position: absolute;
   top: 32px;
   left: 384px;
   line-height: 18px;
 }
-.divider3 {
+.divider-footer {
   position: absolute;
-  top: -0.5px;
-  left: -0.5px;
   border-top: 1px solid var(--neutral-colors-color-600);
   box-sizing: border-box;
-  width: 1221px;
-  height: 1px;
+  width: 100%;
+  
 }
-.footer-botom3 {
+.footer-botom-copy {
   position: absolute;
   top: 190px;
   left: 110px;
@@ -363,39 +349,37 @@
   font-size: var(--text-single-200-regular-size);
   font-family: var(--text-single-200-regular);
 }
-.line-icon,
-.wrapper5 {
+.line-icon {
   position: absolute;
   top: 0;
   left: 0;
   width: 1440px;
   height: 0.8px;
 }
-.wrapper5 {
-  height: 284px;
-}
-.logo-1-icon6,
-.logosolo-texto-16 {
+
+.logo-icon{
   position: absolute;
   top: 0;
   left: 0;
   width: 143px;
   height: 110px;
-  object-fit: cover;
 }
-.logosolo-texto-16 {
+.logosolo-texto {
+  position: absolute;
+  top: 0;
+  left: 0;
   left: 143px;
   width: 315px;
   height: 109px;
 }
-.logo6 {
+.logo-footer {
   position: absolute;
   top: 57px;
   left: 11px;
   width: 458px;
   height: 110px;
 }
-.social-media-icon9 {
+.social-media-icon {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -406,42 +390,46 @@
   border-radius: var(--br-5xs);
   background-color: var(--color-maroon);
 }
-.facebook-icon3 {
+.facebook-icon {
   position: absolute;
   height: 50%;
   width: 27.22%;
   top: 25%;
   right: 36.39%;
   bottom: 25%;
-  left: 36.39%;
+  left: 36%;
   max-width: 100%;
   overflow: hidden;
-  max-height: 100%;
+ 
 }
-.facebook-icon3:hover,
-.instagram-icon3:hover,
-.twitter-icon3:hover {
+.facebook-icon:hover,
+.instagram-icon:hover,
+.twitter-icon:hover {
   background-color: var(--color-darkgoldenrod);
 }
-.social-media-icon-square6 {
+
+.social-media-face {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0%;
   width: 36px;
   height: 36px;
   cursor: pointer;
 }
-.instagram-icon3 {
+.instagram-icon {
   position: relative;
   width: 18px;
   height: 18px;
 }
-.social-media-icon-squareinsta3 {
-  position: relative;
+.social-media-icon-squareinsta {
   width: 36px;
   height: 36px;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  cursor: pointer;
 }
-.social-media-container3 {
+.social-media-insta {
   position: absolute;
   top: 0;
   left: 76px;
@@ -451,7 +439,7 @@
   justify-content: flex-end;
   cursor: pointer;
 }
-.twitter-icon3 {
+.twitter-icon {
   position: absolute;
   height: 40.56%;
   width: 50%;
@@ -463,7 +451,7 @@
   overflow: hidden;
   max-height: 100%;
 }
-.social-media-icon-square7 {
+.social-media-twit {
   position: absolute;
   top: 0;
   left: 151px;
@@ -471,22 +459,25 @@
   height: 36px;
   cursor: pointer;
 }
-.footers-v103,
-.social-media3 {
+.footer,
+.social-media-footer {
   position: absolute;
   top: 82px;
   left: 1105px;
   width: 187px;
   height: 36px;
 }
-.footers-v103 {
+.footer {
   top: 2284px;
   left: 0;
-  background-color: var(--neutral-colors-white);
   width: 1440px;
   height: 284px;
   overflow: hidden;
+  text-align: center;
   color: var(--neutral-colors-text-gray);
+  background-color: var(--neutral-colors-white);
+  font-size: var(--font-size-9xl);
+  font-family: var(--font-playfair-display);
 }
 .resumen-child,
 .resumen-inner,
@@ -512,13 +503,7 @@
   left: 16px;
   width: 446px;
 }
-.container-icon1 {
-  position: absolute;
-  top: 778px;
-  left: 75px;
-  width: 205px;
-  height: 277.5px;
-}
+
 .diamesao1,
 .image-2-icon1 {
   position: absolute;
@@ -589,20 +574,12 @@
   text-align: left;
   color: var(--color-gray);
 }
-.container9 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--neutral-colors-white);
-  width: 1440px;
-  height: 110px;
-}
-.home7 {
-  position: relative;
+
+.nav {
   line-height: 18px;
   cursor: pointer;
 }
-.sections3 {
+.navegation-bar {
   position: absolute;
   top: 46px;
   right: 196px;
@@ -613,28 +590,25 @@
   gap: var(--gap-14xl);
 }
 
-.busqueda-1-icon3 {
+.busqueda-icon {
   position: absolute;
   top: 39px;
-  left: 1362px;
-  width: 25px;
+  left: 100%;  
   height: 25px;
-  object-fit: cover;
 }
-.headers-v123,
-.logo7 {
+.header {
   position: absolute;
   top: 1px;
   left: 0;
   width: 458px;
   height: 110px;
 }
-.headers-v123 {
+.header {
   top: 0;
   width: 1440px;
   color: var(--neutral-colors-headings-black);
 }
-.image-11-icon {
+.image-principal {
   position: absolute;
   top: 353px;
   left: 380px;
@@ -643,10 +617,11 @@
   height: 430px;
   object-fit: cover;
 }
-.image-12-icon,
-.image-15-icon,
-.image-16-icon,
-.image-17-icon {
+
+.img1,
+.img2,
+.img3,
+.img4 {
   position: absolute;
   top: 376px;
   left: 118px;
@@ -655,26 +630,22 @@
   height: 138.7px;
   object-fit: cover;
 }
-.image-15-icon,
-.image-16-icon,
-.image-17-icon {
+.img2,
+.img3,
+.img4 {
   top: 599px;
 }
-.image-16-icon,
-.image-17-icon {
+.img3,
+.img4 {
   top: 376px;
   left: 1098px;
-  height: 138.3px;
 }
-.image-17-icon {
+.img4 {
   top: 599px;
   height: 138.7px;
 }
 .desktop-compra {
-  position: relative;
-  background-color: var(--neutral-colors-white);
-  width: 100%;
-  height: 2568px;
+ 
   overflow: hidden;
   text-align: center;
   font-size: var(--font-size-9xl);
