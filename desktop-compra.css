@@ -349,13 +349,6 @@
   font-size: var(--text-single-200-regular-size);
   font-family: var(--text-single-200-regular);
 }
-.line-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1440px;
-  height: 0.8px;
-}
 
 .logo-icon{
   position: absolute;
@@ -651,4 +644,10 @@
   font-size: var(--font-size-9xl);
   color: var(--color-goldenrod);
   font-family: var(--font-playfair-display);
+}
+.header-line-hr{
+  top: 100px;
+}
+.footer-line-hr {
+  bottom: -1550px;
 }

@@ -545,3 +545,9 @@
   color: var(--color-goldenrod);
   font-family: var(--font-gentium-basic);
 }
+.footer-line-hr {
+  bottom: -450px;
+}
+.header-line-hr{
+  top: 100px;
+}

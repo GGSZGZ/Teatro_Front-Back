@@ -609,3 +609,6 @@
   color: var(--color-goldenrod);
   font-family: var(--font-lobster);
 }
+.footer-line-hr {
+  bottom: -3236px;
+}
