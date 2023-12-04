@@ -37,21 +37,25 @@
         
       </h1>
       <div class="carrusel">
-        <img class="image-7-icon" src="./public/image-7@2x.png" />
+        <div class="carrusel-slide">
+          <img class="image-7-icon" src="./public/image-7@2x.png" />
 
-        <img class="dots-icon" src="./public/dots.svg" />
-
-        <img
-          class="line-roundedchevron-right"
-          alt=""
-          src="./public/line-roundedchevron-right.svg"
-        />
-
-        <div class="carrusel-text">
-          No te lo puedes perder, si no pudiste ver "Espías", ahora tienes de
-          nuevo la oportunidad. Este excelente texto de Ignacio del Moral autor
-          teatral y guionista de "Tadeo Jones" entre otros.
+          <div class="carrusel-text">
+            No te lo puedes perder, si no pudiste ver "Espías", ahora tienes de
+            nuevo la oportunidad. Este excelente texto de Ignacio del Moral autor
+            teatral y guionista de "Tadeo Jones" entre otros.
+          </div>
+          
         </div>
+        <div class="carrusel-slide">
+          <img class="image-8-icon" src="./public/image-slide2.jpg" />
+
+          <div class="carrusel-text">
+            Teatro.
+          </div>
+        </div>
+        <button id="prevBtn"><</button>
+        <button id="nextBtn">></button>
       </div>
     </div>
       <section class="grip" id="grip">
@@ -347,5 +351,6 @@
       
 
     <script src="scripts/index.js"></script>
+    <script src="scripts/carrusel.js"></script>
   </body>
 </html>

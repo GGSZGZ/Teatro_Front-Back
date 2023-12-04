@@ -12,7 +12,7 @@ body {
 .header-line-hr {
   position: absolute;
   top: 88px;
-  width: 120%;
+  width: 100%;
   border-color: var(--color-black);
 }
 

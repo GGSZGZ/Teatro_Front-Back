@@ -46,7 +46,7 @@
   margin: 0;
   position: absolute;
   top: 50px;
-  left: 633px;
+  left: 620px;
   font-size: inherit;
   line-height: 46px;
   font-weight: 400;
@@ -533,40 +533,6 @@
   color: var(--neutral-colors-white);
   text-align: left;
 }
-.dots-icon,
-.image-7-icon,
-.line-roundedchevron-right {
-  position: absolute;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.image-7-icon {
-  height: 96.66%;
-  width: 42.79%;
-  top: 0;
-  right: 57.21%;
-  bottom: 3.34%;
-  left: 0;
-  object-fit: cover;
-}
-.dots-icon,
-.line-roundedchevron-right {
-  height: 2.39%;
-  width: 12.63%;
-  top: 97.61%;
-  right: 72.21%;
-  bottom: 0;
-  left: 15.16%;
-}
-.line-roundedchevron-right {
-  height: 5.73%;
-  width: 3.57%;
-  top: 48.21%;
-  right: 56.32%;
-  bottom: 46.06%;
-  left: 40.12%;
-}
 .carrusel-text {
   position: absolute;
   top: 60px;
@@ -577,7 +543,7 @@
   height: 276px;
 }
 .carrusel {
-  position: absolute;
+  position: relative;
   top: 150px;
   left: 580px;
   width: 673px;
@@ -586,6 +552,48 @@
   font-size: var(--font-size-xl);
   color: var(--neutral-colors-white);
   font-family: var(--font-gentium-basic);
+}
+.carrusel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.carrusel-slide.active{
+  opacity: 1;
+  visibility: visible;
+}
+.carrusel-slide img {
+  position: absolute;
+  height: 96.66%;
+  width: 40%;
+  top: 0;
+  right: 60%;
+  bottom: 3.34%;
+  object-fit: cover;
+}
+#prevBtn {
+  left: 100px;
+  position: absolute;
+  top: 101%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: var(--color-darkgoldenrod);
+  cursor: pointer;
+}
+#nextBtn{
+  left:140px;
+  position: absolute;
+  top: 101%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: var(--color-darkgoldenrod);
+  cursor: pointer;
 }
 .header-line-hr {
   top: 101px; 
