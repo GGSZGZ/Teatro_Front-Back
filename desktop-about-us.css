@@ -44,7 +44,15 @@
   width: 694px;
   height: 290px;
 }
-.second-text {
+.second-text,
+.rectangle-parent2 {
+  position: absolute;
+  top: 710px;
+  left: 98px;
+  width: 600px;
+  height: 250px;
+}
+.second-text{
   position: absolute;
   top: 29px;
   left: 49px;
@@ -362,26 +370,23 @@
 .image-first,
 .image-second {
   position: absolute;
-  height: 21.33%;
-  width: 28.61%;
-  top: 23.27%;
-  right: 11.53%;
-  bottom: 55.4%;
-  left: 59.86%;
+  height: 350px;
+  width: 400px;
+  top: -35px;
+  left: 110%;
   border-radius: var(--br-xl);
-  overflow: hidden;
 }
 .image-second {
-  height: 14.4%;
-  top: 59.19%;
+  height: 100%;
+  top: 100%;
   right: 60.69%;
   bottom: 26.41%;
   left: 10.69%;
 }
 .desktop-about-us {
-  position: absolute;
+  position: relative;
   background-color: var(--neutral-colors-white);
-  width: 100%;
+  width: 90%;
   height: 1637px;
   overflow: hidden;
   text-align: center;

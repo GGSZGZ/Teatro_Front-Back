@@ -543,7 +543,7 @@
   height: 276px;
 }
 .carrusel {
-  position: relative;
+  position: absolute;
   top: 150px;
   left: 580px;
   width: 673px;
