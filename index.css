@@ -35,16 +35,17 @@
   height: 25px;
   object-fit: cover;
 }
-.headers-v12 {
+.header {
   background-color: var(--neutral-colors-white);
   width: 100%;
   height: 110px;
+  
 }
 .heading,
 .heading1 {
   margin: 0;
   position: absolute;
-  top: 147px;
+  top: 50px;
   left: 633px;
   font-size: inherit;
   line-height: 46px;
@@ -52,7 +53,7 @@
   font-family: inherit;
 }
 .heading1 {
-  top: 678px;
+  top: 600px;
   left: 104px;
 }
 .card-heading,
@@ -523,7 +524,7 @@
 .actualmente {
   margin: 0;
   position: absolute;
-  top: 364px;
+  top: 250px;
   left: 200px;
   font-size: inherit;
   line-height: 46px;
@@ -568,7 +569,7 @@
 }
 .carrusel-text {
   position: absolute;
-  top: 82px;
+  top: 60px;
   left: 387px;
   line-height: 46px;
   display: inline-block;
@@ -577,7 +578,7 @@
 }
 .carrusel {
   position: absolute;
-  top: 224px;
+  top: 150px;
   left: 580px;
   width: 673px;
   height: 419px;
@@ -586,11 +587,14 @@
   color: var(--neutral-colors-white);
   font-family: var(--font-gentium-basic);
 }
+.header-line-hr {
+  top: 101px; 
+}
 .desktop-home {
-  position: relative;
+  position: absolute;
   background-color: var(--color-maroon);
   width: 100%;
-  height: 4235px;
+  height: 4100px;
   overflow: hidden;
   text-align: center;
   font-size: var(--font-size-25xl);
