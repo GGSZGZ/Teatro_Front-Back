@@ -20,3 +20,6 @@ addClickEvent("socialMediaIconSquare1", "https://twitter.com/", true);
 
 addClickEvent("homeText1", "./index.html", false);
 addClickEvent("aboutText1", "./desktop-about-us.html", false);
+
+
+

@@ -224,7 +224,7 @@
 .send-message:hover{
   color: var(--color-darkgoldenrod);
 }
-.rectangle-icon {
+#map {
   position: absolute;
   top: 330px;
   left: 72px;
