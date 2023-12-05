@@ -1,6 +1,6 @@
 .titulo {
   position: absolute;
-  top: 217px;
+  top: 100px;
   left: 69px;
   font-size: var(--font-size-25xl);
   line-height: 46px;
@@ -128,10 +128,10 @@
 }
 .marcador-1-icon {
   position: absolute;
-  top: -40px;
+  top: -45px;
   left: 124.3px;
   width: 32px;
-  height: 32px;
+  height: 35px;
   object-fit: cover;
 }
 .form-column1,
@@ -192,13 +192,13 @@
 .form-wrapper,
 .sobre-1-icon {
   position: absolute;
-  top: 354px;
+  top: 300px;
   left: 747px;
   width: 603px;
   height: 526px;
 }
 .sobre-1-icon {
-  top: 387px;
+  top: 332px;
   left: 1177px;
   width: 32px;
   height: 32px;
@@ -212,7 +212,7 @@
 }
 .enviar-mensaje {
   position: absolute;
-  top: 929px;
+  top: 850px;
   left: 1121px;
   border-radius: var(--br-11xl);
   background-color: var(--color-maroon);
@@ -229,7 +229,7 @@
 }
 .rectangle-icon {
   position: absolute;
-  top: 362px;
+  top: 330px;
   left: 72px;
   border-radius: var(--br-31xl);
   width: 616px;
@@ -317,7 +317,6 @@
   font-size: var(--text-single-200-regular-size);
   font-family: var(--text-single-200-regular);
 }
-.wrapper-item,
 .wrapper1 {
   position: absolute;
   top: 0;
@@ -389,6 +388,8 @@
   position: relative;
   width: 18px;
   height: 18px;
+  margin-left: 9px;
+  margin-top: -45px;
 }
 .social-media-icon-squareinsta1 {
   position: relative;
@@ -425,7 +426,7 @@
   height: 36px;
   cursor: pointer;
 }
-.footers-v101,
+.footer,
 .social-media1 {
   position: absolute;
   top: 82px;
@@ -433,8 +434,8 @@
   width: 187px;
   height: 36px;
 }
-.footers-v101 {
-  top: 1150px;
+.footer {
+  top: 1250px;
   left: 0;
   background-color: var(--neutral-colors-white);
   width: 1440px;
@@ -514,20 +515,20 @@
 .busqueda-1-icon1 {
   position: absolute;
   top: 39px;
-  left: 1362px;
+  left: 1450px;
   width: 25px;
   height: 25px;
   object-fit: cover;
 }
-.headers-v121,
+.header,
 .logo3 {
-  position: absolute;
+  position: relative;
   top: 1px;
   left: 0;
   width: 458px;
   height: 110px;
 }
-.headers-v121 {
+.header {
   top: 0;
   width: 1440px;
   font-size: var(--font-size-9xl);
@@ -535,10 +536,11 @@
   font-family: var(--font-playfair-display);
 }
 .desktop-contactos {
+  
   position: relative;
   background-color: var(--neutral-colors-white);
   width: 100%;
-  height: 1421px;
+  height: 1400px;
   overflow: hidden;
   text-align: center;
   font-size: var(--font-size-xl);
@@ -546,7 +548,7 @@
   font-family: var(--font-gentium-basic);
 }
 .footer-line-hr {
-  bottom: -450px;
+  bottom: -550px;
 }
 .header-line-hr{
   top: 100px;
