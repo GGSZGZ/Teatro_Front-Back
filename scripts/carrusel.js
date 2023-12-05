@@ -23,4 +23,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listeners para los botones de siguiente y anterior
     document.getElementById("nextBtn").addEventListener("click", nextSlide);
     document.getElementById("prevBtn").addEventListener("click", prevSlide);
+    setInterval(nextSlide, 3000);
 });

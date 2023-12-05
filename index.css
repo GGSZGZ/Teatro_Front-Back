@@ -121,6 +121,9 @@
   width: 391.8px;
   height: 506px;
 }
+.card:hover, .card1:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover{
+  transform: scale(1.1);
+}
 .card-heading1 {
   position: absolute;
   top: 268px;

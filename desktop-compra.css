@@ -63,6 +63,7 @@
   left: 8.74%;
   border-radius: var(--br-31xl);
   background-color: var(--color-whitesmoke-200);
+  padding-left: 10px;
 }
 .correo,
 .telefono {
@@ -84,10 +85,11 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  right: 0;
+  left:0;
   bottom: 0;
   border-radius: var(--br-31xl);
   background-color: var(--color-whitesmoke-200);
+  padding-left: 10px;
 }
 .input8 {
   position: absolute;
@@ -97,6 +99,7 @@
   bottom: 500%;
   border-radius: var(--br-31xl);
   background-color: var(--color-whitesmoke-200);
+  padding-left: 10px;
 }
 
 .form-wrapper2 {
