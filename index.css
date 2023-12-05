@@ -311,17 +311,38 @@
   color: var(--color-maroon);
   font-family: var(--font-gentium-basic);
 }
-.captura-de-pantalla-2023-11-12 {
+#calendar {
   position: absolute;
   top: 2992px;
   left: 126px;
   width: 1226px;
   height: 794px;
-  background-image: url(./public/capturadepantalla202311121324111@2x.png);
+  font-family:Arial;font-size:12px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
+
+#calendar { font-family: Arial; font-size: 12px; }
+#calendar caption {
+    text-align: left;
+    padding: 5px 10px;
+    background-color: var(--color-gray);
+    color: #fff;
+    font-weight: bold;
+    font-size: medium;
+}
+#calendar th { background-color: #006699; color: #fff; width: 40px; }
+#calendar td { text-align: right; padding: 2px 5px; background-color: rgb(253, 253, 253); }
+#calendar .hoy { background-color:  var(--color-darkgoldenrod); }
+#calendar td:hover{
+  background-color: var(--color-goldenrod);
+}
+
+
+
+
+
 .logo-1-icon,
 .logosolo-texto-1 {
   position: absolute;
