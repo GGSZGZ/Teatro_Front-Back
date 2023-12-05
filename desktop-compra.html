@@ -35,83 +35,33 @@
       <div class="title-compra">Don Juan Tenorio</div>
       <div class="title-form">Rellene los siguientes datos:</div>
       <!-- formulario, rehacer -->
-      <div class="form">
-        
-          
-          <div class="form-box">
+      <form class="form">
+        <div class="form-box">
             <div class="marco-form"></div>
             <div class="background-form"></div>
             <img class="container-mark-right" alt="" src="./public/container.svg" />
 
-            <div class="nombre"></div>
-            <div class="correo"></div>
-            <div class="telefono"></div>
-            <div class="input-left4">
-              <img
-                class="input-icon-left4"
-                alt=""
-                src="./public/input-icon-left.svg"
-              />
-
-              <div class="input-placeholder4">Nombre*</div>
-            
+            <input type="text" class="nombre" placeholder="Nombre*" id="Nombre">
+            <input type="text" class="correo" placeholder="ejemplos@gmail.com*" id="Correo">
+            <input type="text" class="telefono" placeholder="+34 654 158 786*" id="Tlf">
+            <div class="input-left4"></div>
             <div class="input-left5">
-              <img
-                class="input-icon-left4"
-                alt=""
-                src="./public/input-icon-left.svg"
-              />
-
-              <div class="input-placeholder4">Correo electrónico*</div>
             </div>
             <div class="input-left6">
-              <img
-                class="input-icon-left4"
-                alt=""
-                src="./public/input-icon-left.svg"
-              />
-
-              <div class="input-placeholder4">Tlf*</div>
             </div>
-          </div>
         </div>
         <div class="form-wrapper2">
-          <div class="input7"></div>
-          <div class="input-left7">
-            <img
-              class="input-icon-left4"
-              alt=""
-              src="./public/input-icon-left1.svg"
-            />
-
-            <div class="input-placeholder-wrapper">
-              <div class="input-placeholder4">Apellidos*</div>
-            </div>
-          </div>
+          <input type="text" class="input7" placeholder="Apellidos*" id="Apellidos">
         </div>
         <div class="form-wrapper3">
-          <div class="input7"></div>
-          <div class="input-left8">
-            <img
-              class="input-icon-left4"
-              alt=""
-              src="./public/input-icon-left1.svg"
-            />
-
-            <div class="input-placeholder4">Tarjeta prepago</div>
-          </div>
+          <select class="input7">
+            <option value="" disabled selected>Método de Pago</option>
+            <option value="paypal">Paypal</option>
+            <option value="creditCard">Tarjeta de Credito</option>
+            <option value="debitCard">Tarjeta de Debito</option>
         </div>
         <div class="form-wrapper4">
-          <div class="input7"></div>
-          <div class="input-left7">
-            <img
-              class="input-icon-left4"
-              alt=""
-              src="./public/input-icon-left1.svg"
-            />
-
-            <div class="input-placeholder4">Código Postal*</div>
-          </div>
+          <input type="text" class="input8" placeholder="C/Maria Bendito, 25*" id="Calle">
         </div>
         
         <div class="compra-realizada1" id="compraRealizadaContainer">
@@ -121,7 +71,6 @@
           <b class="button-comprar">Comprar</b>
         </div>
 
-        <img class="vector-icon1" alt="" src="./public/vector1.svg" />
         <b class="mtodo-de-pago">Método de pago</b>
         
         <img
