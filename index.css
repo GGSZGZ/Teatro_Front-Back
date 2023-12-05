@@ -317,32 +317,31 @@
   left: 126px;
   width: 1226px;
   height: 794px;
-  font-family:Arial;font-size:12px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
 }
 
-#calendar { font-family: Arial; font-size: 12px; }
 #calendar caption {
     text-align: left;
     padding: 5px 10px;
     background-color: var(--color-gray);
-    color: #fff;
+    color: var(--neutral-colors-white);
+    font-family: var(--font-playfair-display);
+    font-size: var(--headings-h3-size);
     font-weight: bold;
-    font-size: medium;
 }
-#calendar th { background-color: #006699; color: #fff; width: 40px; }
-#calendar td { text-align: right; padding: 2px 5px; background-color: rgb(253, 253, 253); }
-#calendar .hoy { background-color:  var(--color-darkgoldenrod); }
+#calendar td { 
+  text-align: right; padding: 2px 5px; 
+  background-color: var(--neutral-colors-white); 
+  font-size: var(--font-size-xl);
+  font-family: var(--font-gentium-basic);
+}
+#calendar .hoy { 
+  background-color:  var(--color-darkgoldenrod); 
+  font-size: var(--font-size-xl);
+  font-family: var(--font-gentium-basic);
+}
 #calendar td:hover{
   background-color: var(--color-goldenrod);
 }
-
-
-
-
-
 .logo-1-icon,
 .logosolo-texto-1 {
   position: absolute;

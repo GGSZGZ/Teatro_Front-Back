@@ -38,43 +38,50 @@ document.addEventListener("DOMContentLoaded", function () {
   mostrarCalendario(year, month);
 
   function mostrarCalendario(year, month) {
-      var now = new Date(year, month - 1, 1);
-      var ultimoDiaMes = new Date(year, month, 0).getDate();
-      var primerDiaSemana = now.getDay() === 0 ? 7 : now.getDay();
+    var now = new Date(year, month - 1, 1);
+    var ultimoDiaMes = new Date(year, month, 0).getDate();
+    var primerDiaSemana = now.getDay() === 0 ? 7 : now.getDay();
 
-      var dia = 0;
-      var resultado = "<tr bgcolor='silver'>";
+    var dia = 0;
+    var resultado = "<tr bgcolor='silver'>";
 
-      var last_cell = primerDiaSemana + ultimoDiaMes;
+    var last_cell = primerDiaSemana + ultimoDiaMes;
 
-      for (var i = 1; i <= 42; i++) {
-          if (i === primerDiaSemana) {
-              dia = 1;
-          }
+    // Nombres de los días de la semana
+    var diasSemana = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
 
-          if (i < primerDiaSemana || i >= last_cell) {
-              resultado += "<td>&nbsp;</td>";
-          } else {
-              if (dia === actual.getDate() && month === actual.getMonth() + 1 && year === actual.getFullYear())
-                  resultado += "<td class='hoy'>" + dia + "</td>";
-              else
-                  resultado += "<td>" + dia + "</td>";
-              dia++;
-          }
-
-          if (i % 7 === 0) {
-              if (dia > ultimoDiaMes)
-                  break;
-              resultado += "</tr><tr>\n";
-          }
+    for (var i = 1; i <= 42; i++) {
+      if (i === primerDiaSemana) {
+        dia = 1;
       }
-      resultado += "</tr>";
 
-      var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+      if (i < primerDiaSemana || i >= last_cell) {
+        resultado += "<td>&nbsp;</td>";
+      } else {
+        var fecha = new Date(year, month - 1, dia);
+        var nombreDia = diasSemana[fecha.getDay()];
+        if (dia === actual.getDate() && month === actual.getMonth() + 1 && year === actual.getFullYear())
+          resultado += "<td class='hoy'>" + nombreDia + " " + dia + "</td>";
+        else
+          resultado += "<td>" + nombreDia + " " + dia + "</td>";
+        dia++;
+      }
 
-      document.getElementById("calendar").getElementsByTagName("caption")[0].innerHTML = "<div>" + meses[month - 1] + " / " + year + "</div>";
-      document.getElementById("calendar").getElementsByTagName("tbody")[0].innerHTML = resultado;
+      if (i % 7 === 0) {
+        if (dia > ultimoDiaMes)
+          break;
+        resultado += "</tr><tr>\n";
+      }
+    }
+    resultado += "</tr>";
+
+    var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+    document.getElementById("calendar").getElementsByTagName("caption")[0].innerHTML = "<div>" + meses[month - 1] + " / " + year + "</div>";
+    document.getElementById("calendar").getElementsByTagName("tbody")[0].innerHTML = resultado;
   }
 });
+
+
 
 
