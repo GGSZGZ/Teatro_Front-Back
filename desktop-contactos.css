@@ -160,6 +160,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  resize: none;
 }
 .text-area {
   position: relative;
