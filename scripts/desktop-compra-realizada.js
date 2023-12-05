@@ -14,3 +14,4 @@ function addClickEvent(id, url, openInNewWindow) {
 addClickEvent("homeText", "./index.html", false);
 addClickEvent("aboutText", "./desktop-about-us.html", false);
 addClickEvent("contactText", "./desktop-contactos.html", false);
+addClickEvent("okBtn", "./index.html", false);

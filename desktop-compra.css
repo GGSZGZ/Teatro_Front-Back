@@ -107,16 +107,19 @@
 }
 .input7 {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 1440px;
-  height: 781px;
-}
-.input7 {
   height: 100%;
   width: 100%;
   right: 0;
   bottom: 0;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-whitesmoke-200);
+}
+.input8 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 201%;
+  bottom: 500%;
   border-radius: var(--br-31xl);
   background-color: var(--color-whitesmoke-200);
 }
@@ -166,9 +169,7 @@
 }
 .form-wrapper4 {
   top: 23.3%;
-  right: 29.31%;
-  bottom: 69.4%;
-  left: 51.25%;
+  right: 50.31%;
 }
 .mtodo-de-pago,
 .vector-icon1 {
