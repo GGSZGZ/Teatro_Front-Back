@@ -35,7 +35,7 @@
       <div class="title-compra">Don Juan Tenorio</div>
       <div class="title-form">Rellene los siguientes datos:</div>
       <!-- formulario, rehacer -->
-      <form class="form">
+      <form class="form" id="form">
         <div class="form-box">
             <div class="marco-form"></div>
             <div class="background-form"></div>
@@ -49,7 +49,7 @@
           <input type="text" class="input7" placeholder="Apellidos*" id="Apellidos">
         </div>
         <div class="form-wrapper3">
-          <select class="input7">
+          <select class="input7" id="Payment">
             <option value="" disabled selected>Método de Pago</option>
             <option value="paypal">Paypal</option>
             <option value="creditCard">Tarjeta de Credito</option>
@@ -87,17 +87,23 @@
       <!-- fin de formulario -->
       
       <div class="resumen">
+        <div class="resumen1">Resumen</div>
         <div class="resumen-child"></div>
         <div class="resumen-item"></div>
         <div class="resumen-inner"></div>
         <img class="container-mark-left" alt="" src="./public/container1.svg" />
+        <b class="disponibles1">Horario</b>
+        <table id="resumenAsientos" class="fila-butaca-importe">
+          <thead>
+            <tr>
+              <th>Nº Asientos</th>
+              <th> Importe</th>
+            </tr>
+          </thead>
+          <tbody id="">
 
-        <b class="diamesao1">Dia/Mes/Año</b>
-        <img class="image-2-icon1" alt="" src="./public/image-210@2x.png" />
-        <b class="disponibles1">Disponibles</b>
-        <b class="fila-butaca-importe">Fila Butaca Importe</b>
-        <div class="paragraph13">10 30 25,00€</div>
-        <div class="resumen1">Resumen</div>
+          </tbody>
+        </table>
       </div>
       <div class="imgs">
       <img class="image-principal" alt="" src="./public/mainPicBuy.png" />

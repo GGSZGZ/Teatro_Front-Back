@@ -488,8 +488,8 @@
 }
 .disponibles1 {
   position: absolute;
-  top: 183px;
-  left: 249px;
+  top: 170px;
+  left: 160px;
   line-height: 24px;
   display: inline-block;
   text-align: center;
@@ -499,11 +499,15 @@
   font-size: var(--font-size-9xl);
 }
 .fila-butaca-importe {
-  top: 177px;
+  top: 165px;
   left: 570px;
   line-height: 34px;
   width: 689px;
   height: 39px;
+  
+}
+th{
+  width: 689px;
   font-family: var(--font-playfair-display);
   font-size: var(--font-size-9xl);
 }
