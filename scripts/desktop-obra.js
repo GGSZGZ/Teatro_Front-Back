@@ -101,6 +101,35 @@ function crearSalaDeCine(filas, columnas) {
   }
 }
 
+//calendario
+document.addEventListener("DOMContentLoaded", function () {
+  var daysContainer = document.getElementById("daysContainer");
+  
+  mostrarCalendario();
+
+  function mostrarCalendario() {
+      var daysOfWeek = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
+      var today = new Date();
+      var day = today.getDay();
+
+      for (var i = 1; i <= 7; i++) {
+          var dayElement = document.createElement("div");
+          dayElement.classList.add("day");
+          dayElement.textContent = daysOfWeek[i - 1];
+
+          if (i === day) {
+              dayElement.classList.add("today");
+          }
+
+          daysContainer.appendChild(dayElement);
+      }
+  }
+});
+
+
+
+
+
 addClickEvent("popupmasterPrimaryButton", "./desktop-compra.html");
 addClickEvent("popupmasterPrimaryButton1", "./desktop-obra.html");
 addClickEvent("homeText", "./index.html");
