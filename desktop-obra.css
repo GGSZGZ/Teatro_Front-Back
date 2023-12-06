@@ -69,7 +69,7 @@
 .image-1-icon {
   position: absolute;
   top: 150px;
-  left: 693px;
+  left: 800px;
   width: 704px;
   height: 557px;
   object-fit: cover;
@@ -113,7 +113,7 @@
 }
 .sinopsis {
   top: 980px;
-  left: 39px;
+  left: 90px;
   height: 504px;
   text-align: justify;
   font-size: var(--font-size-xl);
@@ -166,7 +166,7 @@
 .director {
   position: absolute;
   top: 2100px;
-  left: 39px;
+  left: 90px;
   width: 1358px;
   height: 507px;
   text-align: left;
@@ -312,7 +312,7 @@
 }
 .gender {
   top: 2700px;
-  left: 0;
+  left: 90px;
   width: 1440px;
   height: 450px;
   text-align: left;
@@ -435,7 +435,7 @@
 .fechas {
   position: absolute;
   top: 1500px;
-  left: 39px;
+  left: 90px;
   width: 1358px;
   height: 426px;
   text-align: center;
@@ -443,14 +443,7 @@
   color: var(--color-black);
   font-family: var(--font-playfair-display);
 }
-.line-roundedsearch-icon5 {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  overflow: hidden;
-  flex-shrink: 0;
-  display: none;
-}
+
 .button-text5 {
   position: relative;
   font-size: var(--text-single-100-regular-size);
@@ -541,6 +534,7 @@
 }
 .home5 {
   position: relative;
+  margin-left: 25px;
   line-height: 18px;
 }
 .link18,
@@ -615,10 +609,11 @@
   left: 0;
   width: 1440px;
   height: 284px;
+  left: 90px;
 }
 .logo5 {
   top: 57px;
-  left: 11px;
+ 
   width: 458px;
   height: 110px;
 }
@@ -704,7 +699,7 @@
 .social-media2 {
   position: absolute;
   top: 82px;
-  left: 1105px;
+  right: 70px;
   width: 187px;
   height: 36px;
 }
@@ -714,6 +709,7 @@
   overflow: hidden;
   text-align: center;
 }
+
 .footer {
   position: absolute;
   top: 3300px;
@@ -731,6 +727,7 @@
   font-size: var(--font-size-25xl);
   color: var(--color-goldenrod);
   font-family: var(--font-lobster);
+ 
 }
 .rectangle-div {
   position: absolute;
@@ -854,7 +851,9 @@
   font-family: var(--font-playfair-display);
 }
 .header-line-hr{
+  position: relative;
   top: -10px;
+  
 }
 .footer-line-hr{
   bottom: -2600px;

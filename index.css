@@ -238,9 +238,9 @@
 .image-13-icon {
   position: absolute;
   top: 1056px;
-  left: 0;
   width: 1220px;
   height: 1036px;
+  margin-left: 1.8%;
 }
 .image-13-icon {
   top: 24px;
@@ -300,6 +300,7 @@
   left: 0;
   width: 1220px;
   height: 1036px;
+  margin-left: 1.8%;
 }
 .grip {
   top: 784px;
@@ -314,13 +315,13 @@
 #calendar {
   position: absolute;
   top: 2992px;
-  left: 126px;
   width: 1226px;
   height: 794px;
+  margin-left: 10%;
 }
 
 #calendar caption {
-    text-align: left;
+    text-align: center;
     padding: 5px 10px;
     background-color: var(--color-gray);
     color: var(--neutral-colors-white);
@@ -397,7 +398,7 @@
 .nav-list {
   position: absolute;
   top: calc(50% - 63.6px);
-  left: calc(50% - 222.6px);
+  right: 450px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -422,7 +423,7 @@
 .footer-botom {
   position: absolute;
   top: 190px;
-  left: 110px;
+  margin-left: 10%;
   width: 1220px;
   height: 50px;
   font-size: var(--text-single-200-regular-size);
@@ -443,7 +444,7 @@
 }
 .logo1 {
   top: 57px;
-  left: 11px;
+  margin-left: 5%;
   width: 458px;
   height: 110px;
 }
@@ -523,14 +524,22 @@
   height: 36px;
   cursor: pointer;
 }
-.footer,
-.social-media {
+.footer {
   position: absolute;
   top: 82px;
   left: 1105px;
   width: 100%;
   height: 36px;
 }
+.social-media{
+  position: relative;
+  top: 82px;
+  margin-left: 80%;
+  width: 100%;
+  height: 36px;
+}
+
+
 .footer {
   top: 3951px;
   left: 0;
@@ -634,4 +643,7 @@
 }
 .footer-line-hr {
   bottom: -3236px;
+}
+.footer-Content{
+  margin-left: 10%;
 }

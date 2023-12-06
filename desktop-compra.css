@@ -4,7 +4,7 @@
   position: absolute;
   font-size: var(--font-size-25xl);
   font-family: var(--font-lobster);
-
+  margin-left: 1%;
 }
 .title-form {
   font-size: var(--font-size-25xl);
@@ -251,6 +251,7 @@
   font-size: var(--text-single-100-regular-size);
   color: var(--neutral-colors-color-900);
   font-family: var(--text-single-200-regular);
+  margin-left: 3.5%;
 }
 
 .home-icon {
@@ -268,6 +269,7 @@
 .master-link {
   align-items: center;
   gap: var(--gap-7xs);
+  margin-left: 25px;
 }
 .link {
   
@@ -437,6 +439,7 @@
   background-color: var(--neutral-colors-white);
   font-size: var(--font-size-9xl);
   font-family: var(--font-playfair-display);
+  margin-left: 4%;
 }
 .resumen-child,
 .resumen-inner,
@@ -538,6 +541,7 @@
   height: 375px;
   text-align: left;
   color: var(--color-gray);
+  margin-left: 3.5%;
 }
 
 .nav {
@@ -547,12 +551,12 @@
 .navegation-bar {
   position: absolute;
   top: 46px;
-  right: 196px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   gap: var(--gap-14xl);
+  right: 120px;
 }
 
 .busqueda-icon {
@@ -616,10 +620,15 @@
   font-size: var(--font-size-9xl);
   color: var(--color-goldenrod);
   font-family: var(--font-playfair-display);
+  
 }
 .header-line-hr{
   top: 100px;
 }
 .footer-line-hr {
   bottom: -1550px;
+}
+.imgs{
+  position: absolute;
+  margin-left: 3.5%;
 }
