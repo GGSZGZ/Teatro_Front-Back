@@ -62,9 +62,9 @@
 .section {
   position: absolute;
   top: 46px;
-  right: 196px;
   display: flex;
   gap: var(--gap-14xl);
+  right: 120px;
 }
 
 .busqueda-icon {

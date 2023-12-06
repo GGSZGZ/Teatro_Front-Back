@@ -118,6 +118,7 @@
 .home9 {
   position: relative;
   line-height: 18px;
+  margin-left: 25px;
 }
 .link24,
 .master-link24 {
@@ -154,7 +155,7 @@
 .nav-list4 {
   position: absolute;
   top: calc(50% - 63.6px);
-  left: calc(50% - 222.6px);
+  margin-left: 40%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -214,7 +215,7 @@
 .logo9 {
   position: absolute;
   top: 57px;
-  left: 11px;
+  left: 90px;
   width: 458px;
   height: 110px;
 }
@@ -298,7 +299,7 @@
 .social-media4 {
   position: absolute;
   top: 82px;
-  left: 1105px;
+  left: 1150px;
   width: 187px;
   height: 36px;
 }
@@ -329,12 +330,12 @@
 .sections5 {
   position: absolute;
   top: 46px;
-  right: 196px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   gap: var(--gap-14xl);
+  right: 120px;
 }
 
 
