@@ -38,6 +38,6 @@ document.getElementById("compraRealizadaContainer1").addEventListener("click",()
     //vacio los campos del form
     console.log("Nombre:"+name+", Apellidos:"+apellidos+", Correo:"+mail+", Dirección:"+direction+", Tlf:"+telephone+", Payment:"+payment)
     document.getElementById("form").reset();
-    window.location.href = url;
+    window.location.href = "./desktop-compra-realizada.html";
   }
 });
