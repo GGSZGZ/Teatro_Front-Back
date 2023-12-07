@@ -35,7 +35,7 @@
       <div class="title-compra">Don Juan Tenorio</div>
       <div class="title-form">Rellene los siguientes datos:</div>
       <!-- formulario, rehacer -->
-      <form class="form" id="form">
+      <form class="form" id="form" action="http://localhost:3000/tickets" method="POST">
         <div class="form-box">
             <div class="marco-form"></div>
             <div class="background-form"></div>
@@ -92,7 +92,8 @@
         <div class="resumen-item"></div>
         <div class="resumen-inner"></div>
         <img class="container-mark-left" alt="" src="./public/container1.svg" />
-        <b class="disponibles1">Horario</b>
+        <b class="horario">Horario</b>
+        <b class="hora" id="horarioFin"></b>
         <table id="resumenAsientos" class="fila-butaca-importe">
           <thead>
             <tr>
@@ -100,8 +101,11 @@
               <th> Importe</th>
             </tr>
           </thead>
-          <tbody id="">
-
+          <tbody>
+            <tr>
+              <td id="cantidadAss">4</td>
+              <td id="importe">75€</td>
+            </tr>
           </tbody>
         </table>
       </div>

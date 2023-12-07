@@ -11,10 +11,26 @@ function addClickEvent(id, url, openInNewWindow = false) {
   }
 }
 
+var horario;
 function addPopupClickEvent(buttonId) {
   var button = document.getElementById(buttonId);
   if (button) {
     button.addEventListener("click", function () {
+      //Obtención de la hora del horario al seleccionar el botón
+      switch(buttonId){
+        case "buttonSeleccionar":
+          horario = document.getElementById("hora1").textContent;
+          localStorage.setItem('hora', horario);
+          break;
+        case "buttonSeleccionar1":
+          horario = document.getElementById("hora2").textContent;
+          localStorage.setItem('hora', horario);
+          break;
+        case "buttonSeleccionar2":
+          horario = document.getElementById("hora3").textContent;
+          localStorage.setItem('hora', horario);
+          break;
+      }
       var popup = document.getElementById("desktopPopUp");
       if (!popup) return;
       var popupStyle = popup.style;
@@ -26,7 +42,6 @@ function addPopupClickEvent(buttonId) {
         popupStyle.justifyContent = "center";
       }
       popup.setAttribute("closable", "");
-
       var onClick =
         popup.onClick ||
         function (e) {
@@ -38,13 +53,14 @@ function addPopupClickEvent(buttonId) {
     });
   }
 }
-  
+var importe;
+var cantidadAsientos;
 // Función para crear la sala de cine
 function crearSalaDeCine(filas, columnas) {
   var salaCine = document.getElementById('sala-cine');
   var cantidad = document.getElementById('cantidad');
   var precio = document.getElementById('importe');
-  var importe;
+  
 
   for (var fila = 1; fila <= filas; fila++) {
       for (var columna = 1; columna <= columnas; columna++) {
@@ -91,12 +107,16 @@ function crearSalaDeCine(filas, columnas) {
                     var columnas = nuevaFila.insertCell(1);
                     filas.textContent = numeroFila;
                     columnas.textContent = numeroColumna;
-                    cantidad.textContent = "ENTRADAS SELECCIONADAS: "+asientosSeleccionadosImage.length;
-                    precio.textContent = "IMPORTE TOTAL: "+asientosSeleccionadosImage.length*25+ "€";
                     importe = asientosSeleccionadosImage.length*25;
+                    cantidad.textContent = "ENTRADAS SELECCIONADAS: "+asientosSeleccionadosImage.length;
+                    precio.textContent = "IMPORTE TOTAL: "+importe+ "€";
                 }
+                cantidadAsientos=asientosSeleccionadosImage.length;
+                localStorage.setItem('importe', importe);
+                localStorage.setItem('cantidadAsientos', cantidadAsientos);
             }
           });
+          
       }
   }
 }
@@ -150,3 +170,5 @@ addClickEvent("socialMediaIconSquare1", "https://twitter.com/",true);
 
 // Llama a la función para crear la sala de cine
 crearSalaDeCine(6, 6);
+
+

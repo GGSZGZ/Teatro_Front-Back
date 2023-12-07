@@ -1,3 +1,4 @@
+
 function addClickEvent(id, url, openInNewWindow) {
   var element = document.getElementById(id);
   if (element) {
@@ -24,20 +25,62 @@ addClickEvent("homeText1", "./index.html", false);
 addClickEvent("aboutText1", "./desktop-about-us.html", false);
 addClickEvent("contactText1", "./desktop-contactos.html", false);
 
+var horario = localStorage.getItem('hora');
+document.getElementById('horarioFin').textContent = horario;
+
+var importe = localStorage.getItem('importe');
+var cantidadAsientos = localStorage.getItem('cantidadAsientos');
+importe +="€";
+document.getElementById('importe').textContent = importe;
+document.getElementById('cantidadAss').textContent = cantidadAsientos;
+
+
+
 document.getElementById("compraRealizadaContainer1").addEventListener("click",()=>{
   var name=document.getElementById("Nombre").value;
   var mail=document.getElementById("Correo").value;
   var telephone=document.getElementById("Tlf").value;
-  var apellidos=document.getElementById("Apellidos").value;
+  var surname=document.getElementById("Apellidos").value;
   var direction=document.getElementById("Calle").value;
   var payment=document.getElementById("Payment").value;
-  if(name=="" || mail==""|| telephone==""|| direction==""|| apellidos=="" ||payment==""){
+  if(name=="" || mail==""|| telephone==""|| direction==""|| surname=="" ||payment==""){
     alert("Por favor rellene todos los campos obligatorios");
   }else{
-    //mandar datos json
-    //vacio los campos del form
-    console.log("Nombre:"+name+", Apellidos:"+apellidos+", Correo:"+mail+", Dirección:"+direction+", Tlf:"+telephone+", Payment:"+payment)
-    document.getElementById("form").reset();
-    window.location.href = "./desktop-compra-realizada.html";
-  }
+    // Construir objeto con los datos del formulario
+    const userData = {
+     name,
+     surname,
+     mail,
+     direction,
+     telephone,
+     payment,
+     horario,
+     importe,
+     cantidadAsientos,
+   };
+
+   // Realizar la solicitud POST al servidor
+   fetch("http://localhost:3000/tickets", {
+     method: "POST",
+     headers: {
+       "Content-Type": "application/json",
+     },
+     body: JSON.stringify(userData),
+   })
+     .then((response) => {
+       if (!response.ok) {
+         throw new Error(`HTTP error! Status: ${response.status}`);
+       }
+       return response.json();
+     })
+     .then((data) => {
+       console.log("Compra realizada con éxito:", data);
+       // Realizar cualquier acción adicional después de una compra exitosa
+       document.getElementById("form").reset(); // Vaciar los campos del formulario
+       window.location.href = "./desktop-compra-realizada.html"; // Redirigir a la página de compra realizada
+     })
+     .catch((error) => {
+       console.error("Error en la solicitud POST:", error);
+     });
+ }
 });
