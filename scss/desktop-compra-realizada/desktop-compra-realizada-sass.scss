@@ -1,0 +1,186 @@
+$color-gray: var(--color-gray);
+$color-darkgoldenrod: var(--color-darkgoldenrod);
+$color-maroon: var(--color-maroon);
+$br-11xl: var(--br-11xl);
+$padding-lg: var(--padding-lg);
+$padding-5xl: var(--padding-5xl);
+$gap-5xs: var(--gap-5xs);
+$gap-14xl: var(--gap-14xl);
+$neutral-colors-headings-black: var(--neutral-colors-headings-black);
+$neutral-colors-white: var(--neutral-colors-white);
+$font-size-9xl: var(--font-size-9xl);
+$font-playfair-display: var(--font-playfair-display);
+
+$top-0: 0;
+$top-20-percent: 20%;
+$width-100-percent:100%;
+$width-1440px:1440px;
+$left-15-percent: 15%;
+$border-radius-100px: 100px;
+$width-70-percent: 70%;
+$height-50-percent: 50%;
+
+$top-42-percent: 42%;
+$left-25-percent: 25%;
+$width-50-percent: 50%;
+
+$top-25-percent: 25%;
+$left-47-percent: 47%;
+
+$top-62-percent: 62%;
+$left-48-percent: 48%;
+
+$width-12-percent: 12%;
+$left-0:0;
+
+$top-55-percent: 55%;
+$left-43-percent: 43%;
+
+$line-height-18px: 18px;
+
+$top-46px: 46px;
+$right-120px: 120px;
+
+$top-39px: 39px;
+$left-1450px: 1450px;
+$width-25px: 25px;
+$height-25px: 25px;
+
+$width-143px: 143px;
+$height-110px: 110px;
+
+$width-315px: 315px;
+$height-109px: 109px;
+
+$top-100px: 100px;
+$height-900px: 900px;
+
+$height-5-percent: 5%;
+
+.desktop-comprarealizada-child {
+  position: absolute;
+  top: $top-20-percent;
+  left: $left-15-percent;
+  border-radius: $border-radius-100px;
+  background-color: $color-gray;
+  width: $width-70-percent;
+  height: $height-50-percent;
+}
+
+.felicidades-su-compra {
+  position: absolute;
+  top: $top-42-percent;
+  left: $left-25-percent;
+  width: $width-50-percent;
+}
+
+.icon-circle-check {
+  position: absolute;
+  top: $top-25-percent;
+  left: $left-47-percent;
+}
+
+.button:hover {
+  color: $color-darkgoldenrod;
+}
+
+.ok-button {
+  position: absolute;
+  top: $top-62-percent;
+  left: $left-48-percent;
+  border-radius: $br-11xl;
+  background-color: $color-maroon;
+  padding: $padding-lg $padding-5xl;
+  cursor: pointer;
+  display: flex;
+  height: $height-5-percent;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.descargar-icon {
+  width: $width-12-percent;
+}
+
+.descargar-button {
+  position: absolute;
+  top: $top-55-percent;
+  left: $left-43-percent;
+  border-radius: $br-11xl;
+  background-color: $color-maroon;
+  height: $height-5-percent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $padding-lg 0 $padding-lg $padding-5xl;
+  box-sizing: border-box;
+  gap: $gap-5xs;
+  cursor: pointer;
+}
+
+.navText {
+  line-height: $line-height-18px;
+  cursor: pointer;
+}
+
+.section {
+  position: absolute;
+  top: $top-46px;
+  display: flex;
+  gap: $gap-14xl;
+  right: $right-120px;
+}
+
+.busqueda-icon {
+  position: absolute;
+  object-fit: cover;
+  top: $top-39px;
+  left: $left-1450px;
+  width: $width-25px;
+  height: $height-25px;
+}
+
+.logo-icon {
+  position: absolute;
+  object-fit: cover;
+  top: $top-0;
+  left: $left-0;
+  width: $width-143px;
+  height: $height-110px;
+}
+
+.logo-texto {
+  position: absolute;
+  object-fit: cover;
+  top: $top-0;
+  left: $width-143px;
+  width: $width-315px;
+  height: $height-109px;
+}
+
+.header-section {
+  position: relative;
+  left: $left-0;
+  height: $height-110px;
+  top: $top-0;
+  width: $width-1440px;
+  color: $neutral-colors-headings-black;
+  font-size: $font-size-9xl;
+  font-family: $font-playfair-display;
+}
+
+.desktop-comprarealizada {
+  position: relative;
+  background-color: $neutral-colors-white;
+  width: $width-100-percent;
+  height: $height-900px;
+  overflow: hidden;
+  text-align: center;
+  font-size: $font-size-9xl;
+  color: $neutral-colors-white;
+  font-family: $font-playfair-display;
+}
+
+.header-line-hr {
+  top: $top-100px;
+}
