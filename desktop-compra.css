@@ -486,7 +486,7 @@
   height: 34px;
   object-fit: cover;
 }
-.disponibles1 {
+.horario {
   position: absolute;
   top: 170px;
   left: 160px;
@@ -498,18 +498,35 @@
   font-family: var(--font-playfair-display);
   font-size: var(--font-size-9xl);
 }
+.hora {
+  position: absolute;
+  top: 240px;
+  left: 160px;
+  display: inline-block;
+  text-align: center;
+  width: 156px;
+  height: 18px;
+  font-family: var(--font-gentium-basic);
+  font-size: var(--font-size-xl);
+}
 .fila-butaca-importe {
   top: 165px;
   left: 570px;
   line-height: 34px;
   width: 689px;
   height: 39px;
-  
+  text-align: center;
 }
 th{
   width: 689px;
   font-family: var(--font-playfair-display);
   font-size: var(--font-size-9xl);
+}
+td{
+  height: 90px;
+  width: 689px;
+  font-family: var(--font-gentium-basic);
+  font-size: var(--font-size-xl);
 }
 .fila-butaca-importe,
 .paragraph13,

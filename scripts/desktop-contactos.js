@@ -33,10 +33,37 @@ document.getElementById("send-message").addEventListener("click",()=>{
   if(name=="" || mail==""|| telephone==""||direction==""){
     alert("Por favor rellene todos los campos obligatorios");
   }else{
-    //mandar datos json
-    //vacio los campos del form
-    document.getElementById("formulario").reset();
-  }
+    // Construir objeto con los datos del formulario
+    const contactData = {
+     name,
+     mail,
+     telephone,
+     direction,
+     message,
+   };
+
+   // Realizar la solicitud POST al servidor
+   fetch("http://localhost:3000/contact", {
+     method: "POST",
+     headers: {
+       "Content-Type": "application/json",
+     },
+     body: JSON.stringify(contactData),
+   })
+     .then((response) => {
+       if (!response.ok) {
+         throw new Error(`HTTP error! Status: ${response.status}`);
+       }
+       return response.json();
+     })
+     .then((data) => {
+       // Realizar cualquier acción adicional después de una compra exitosa
+       document.getElementById("formulario").reset(); // Vaciar los campos del formulario
+     })
+     .catch((error) => {
+       console.error("Error en la solicitud POST:", error);
+     });
+ }
 });
 
 
