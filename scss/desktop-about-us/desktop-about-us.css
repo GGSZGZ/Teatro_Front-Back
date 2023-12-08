@@ -271,7 +271,7 @@
   bottom: 25%;
   left: 36.39%;
   max-width: 100%;
-  overflow: hidden;
+ 
   max-height: 100%;
 }
 
@@ -323,7 +323,7 @@
   bottom: 29.72%;
   left: 25%;
   max-width: 100%;
-  overflow: hidden;
+ 
   max-height: 100%;
 }
 
@@ -355,7 +355,7 @@
 .footer {
   top: 1452px;
   height: 284px;
-  overflow: hidden;
+  
   font-size: 28px;
   color: var(--neutral-colors-text-gray);
   font-family: var(--font-playfair-display), serif;
@@ -441,7 +441,7 @@
   background-color: var(--neutral-colors-white);
   width: 100%;
   height: 1600px;
-  overflow: hidden;
+  
   text-align: center;
   font-size: 20px;
   color: var(--neutral-colors-white);
@@ -457,3 +457,208 @@
 }
 
 /*# sourceMappingURL=desktop-about-us.css.map */
+@media screen and (max-width: 767px) {
+ 
+  .logosolo-texto-19{
+    display:none;
+  }
+  .logo-1-icon9{
+    left: -60px;
+  }
+
+  .sections5{
+    width: 50%;
+    justify-content: center;
+    left: 250px;
+    
+  }
+  .header{
+    width: 50%;
+  }
+  .container11{
+    width: 50%;
+  }
+  .wrapper6{
+    width: 50%;
+  }
+  .footer-botom4{
+    width: 100%;
+  }
+  .container12{
+    width: 50%;
+  }
+  .busqueda-1-icon5{
+    left: 500px;
+  }
+  
+  .heading5{
+    left: 140px;
+    top: 40px;
+    font-size: 40px;
+  }
+  
+  .desktop-about-us-child{
+    position: absolute;
+    top: 253px;
+    left: 32px;
+    width: 500px;
+    height: 650px;
+    text-align: justify;
+    border-radius: 50px;
+  }
+  
+  .desktop-about-us-item{
+    position: absolute;
+    top: 950px;
+    left: -75px;
+    width: 500px;
+    height: 650px;
+    text-align: justify;
+    border-radius: 50px;
+  }
+  .desktop-about-us-child1{
+    position: absolute;
+    top: 260px;
+    left: 130px;
+    border-radius: var(--br-xl);
+    background-color: var(--color-darkgoldenrod);
+    width: 300px;
+    height: 175px;
+  }
+  .desktop-about-us-inner{
+    position: absolute;
+    top: 970px;
+    left: 120px;
+    border-radius: var(--br-xl);
+    background-color: var(--color-maroon);
+    width: 300px;
+    height: 160px;
+  }
+  .image-first{
+    position: absolute;
+    height: 58%;
+    width: 200px;
+    top: -35px;
+    left: 80px;
+    border-radius: 20px;
+    border-radius: var(--br-xl);
+   
+  
+    object-fit: cover;
+    
+  }
+  .image-second{
+    position: absolute;
+    height: 58%;
+    width: 65%;
+    top: 366px;
+    left: -25px;
+    border-radius: 20px;
+    border-radius: var(--br-xl);
+    max-width: 100%;
+  
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .first-text{
+    position: absolute;
+    top: 180px;
+    left: 141px;
+    line-height: 22px;
+    display: inline-block;
+    width: 276.6px;
+    height: 180px;
+    font-size: 20px;
+    font-family: var(--font-gentium-basic);
+    font-weight: lighter;
+    text-align: center;
+  }
+  .second-text{
+    position: absolute;
+    top: 350px;
+    left: 141px;
+    line-height: 22px;
+    display: inline-block;
+    width: 276.6px;
+    height: 180px;
+    font-size: 20px;
+    font-family: var(--font-gentium-basic);
+    font-weight: lighter;
+    text-align: center;
+  }
+  .group-child{
+    width: 300px;
+    top: 140px;
+    left: 80px;
+    border-radius: 30px;
+    height: 450px;
+  }
+  .group-inner{
+    width: 400px;
+    top: 290px;
+    left: 75px;
+    border-radius: 30px;
+    height: 450px;
+  }
+
+
+
+.nav-list4{
+  display: none;
+}
+.social-media4{
+  left: 250px;
+}
+.copyright4{
+  left:-60px;
+  display: inline;
+  width: 500px;
+}
+
+
+  .footer{
+    
+      position: absolute;
+      top: 1800px;
+      left: -2px;
+      width: 200%;
+      height: 300px;
+      
+      color: var(--neutral-colors-text-gray);
+      font-family: var(--text-single-200-regular);
+  }
+  .footer-line-hr{
+    bottom: -900px;
+    width: 130%;
+  }
+  .header-line-hr{
+    width: 130%;
+  }
+  .rectangle-container{
+    left: 0;
+  }
+  .divider4{
+    width: 400%;
+    left: -60px;
+  }
+ 
+  .footer{
+    width: 50%;
+  }
+  .rectangle-group{
+    width: 0px;
+    height: 290px;
+    left: 0px;
+  }
+  .rectangle-parent{
+    width: 100%;
+  }
+  .rectangle-parent2{
+    width: 70%;
+  }
+.rectangle-container{
+  width: 100%;
+}
+  
+
+}
