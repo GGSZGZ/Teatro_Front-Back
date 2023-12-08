@@ -1,3 +1,4 @@
+
 .title-compra {
   top: 30%;
   left: 40%;
@@ -49,8 +50,8 @@
 
 .container-mark-left {
   position: absolute;
-  top: 778px;
-  left: 75px;
+  top: 300px;
+  left: 50px;
   width: 205px;
   height: 277.5px;
 }
@@ -317,13 +318,11 @@
 
 .usuario-2-icon {
   position: absolute;
-  top: 281px;
+  top: 103px;
   left: 142px;
   width: 32px;
   height: 32px;
   object-fit: cover;
-  top: 194px;
-  top: 103px;
 }
 
 .usuario-3-icon {
@@ -432,8 +431,23 @@
   width: 143px;
   height: 110px;
 }
+.logo-icon1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 143px;
+  height: 110px;
+}
 
 .logosolo-texto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: 143px;
+  width: 315px;
+  height: 109px;
+}
+.logosolo-texto1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -812,7 +826,16 @@ td {
 
 .desktop-compra {
   width: 100%;
-  overflow: hidden;
+  height: 100px;
+  text-align: center;
+  font-size: var(--font-size-9xl);
+  color: var(--color-goldenrod);
+  font-family: var(--font-playfair-display);
+}
+.desktop-compra1 {
+  top: 120px;
+  width: 100%;  
+  height: 2200px;
   text-align: center;
   font-size: var(--font-size-9xl);
   color: var(--color-goldenrod);
@@ -821,6 +844,7 @@ td {
 
 .header-line-hr {
   top: 100px;
+  width: 100%;
 }
 
 .footer-line-hr {
@@ -832,4 +856,208 @@ td {
   margin-left: 3.5%;
 }
 
+
 /*# sourceMappingURL=desktop-compra.css.map */
+/*Dimensiones creadas en iPhone 14 Pro Max*/
+@media screen and (max-width: 432px){
+  .header{
+    width: 430px;
+  }
+  .logo-icon{
+    transform: scale(0.5);
+    left: -20px;
+  }
+  .navegation-bar{
+    transform: scale(0.8);
+    left: 350px;
+  }
+  .busqueda-icon{
+    left: 87%;
+  }
+  .header-line-hr{
+    width: 100%;
+  }
+  .logosolo-texto{
+    display: none;
+  }
+  
+  .footer{
+    transform: scale(0.5);
+    top: 2200px;
+    left: -380px;
+  }
+  .nav-list{
+    display: none;
+  }
+  .social-media-footer{
+    left: 600px;
+  }
+  .divider-footer{
+    width: 50%;
+  }
+  .copyright-text{
+    left: 80px;
+  }
+  .footer-line-hr{
+    top: 2270px;
+  }
+  .desktop-compra1{
+    height: 932px;
+  }
+  /*Terminación Header y footer*/
+  .title-compra{
+    top: 13%;
+    left: 5%;
+  }
+  .image-principal{
+    transform: scale(0.5);
+    top: 10px;
+    left: -130px;
+  }
+  .img1, .img2, .img3, .img4{
+    transform: scale(0.5);
+  }
+  .img1{
+    top: 320px;
+    left: 20px;
+  }
+  .img2{
+    top: 420px;
+    left: 20px;
+  }
+  .img3{
+    top: 320px;
+    left: 160px;
+  }
+  .img4{
+    top: 420px;
+    left: 160px;
+  }
+  .resumen{
+    top: 700px;
+    width: 350px;
+    height: 370px;
+  }
+  .resumen-child{
+    top: 70px;
+    left: -40px;
+    width: 380px;
+    height: 290px;
+  }
+  .resumen-inner{
+    top: 80px;
+    left: -25px;
+    width: 350px;
+    height: 100px;
+  }
+  .horario{
+    top: 90px;
+    left: 70px;
+  }
+  .hora{
+    top: 140px;
+    left: 70px;
+  }
+  .resumen-item{
+    left: -25px;
+    top: 200px;
+    width: 350px;
+    height: 150px;
+  }
+  .fila-butaca-importe{
+    left: -25px;
+    top: 220px;
+    width: 350px;
+  }
+  
+  .title-form{
+    width: 350px;
+    top: 1100px;
+    height: 85px;
+  }
+  .form{
+    top: 1200px;
+    height: 1000px;
+  }
+  .form-box{
+    left: 0px;
+  }
+  .marco-form{
+    width: 405px;
+    height: 900px;
+  }
+  .background-form{
+    top: 10px;
+    left: 10px;
+    width: 385px;
+    height: 880px;
+  }
+  .usuario-2-icon{
+    top: 70px;
+    left:30px;
+  }
+  .nombre{
+    top:4%;
+    left:6%;
+  }
+  .usuario-3-icon{
+    left: 30px;
+    top: 150px;
+  }
+  .form-wrapper2{
+    top:14%;
+    left: 5.6%;
+    height: 6%;
+  }
+  .sobre-2-icon{
+    left: 30px;
+    top: 230px;
+  }
+  .correo{
+    top:30%;
+    left: 6%;
+  }
+  .edificio-2-icon{
+    left: 30px;
+    top: 310px;
+  }
+  .input8{
+    left:-3%;
+    bottom:360%;
+  }
+  .form-wrapper3{
+    top: 52%;
+    left: 6%;
+    height: 6%;
+  }
+  .telefono-3-icon{
+    left: 30px;
+    top:390px;
+  }
+  .telefono{
+    top:55%;
+    left: 6%;
+  }
+  .mtodo-de-pago{
+    top: 475px;
+    left: 50px;
+  }
+  .tarjeta-de-credito-1-icon{
+    left: 250px;
+    top: 475px;
+  }
+  .container-mark-left, .container-mark-right{
+    transform: scale(0.5);
+  }
+  .container-mark-left{
+    left: -35px;
+  }
+  .compra-realizada1{
+    left: 80px;
+    top: 800px;
+  }
+  .compra-realizada2{
+    left: 80px;
+    top: 730px;
+  }
+}

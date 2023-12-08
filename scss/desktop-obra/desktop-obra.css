@@ -1029,7 +1029,6 @@
   background-color: var(--neutral-colors-white);
   width: 1182px;
   height: 579px;
-  overflow: hidden;
   max-width: 90%;
   max-height: 90%;
   text-align: center;
@@ -1100,3 +1099,5 @@ th {
 }
 
 /*# sourceMappingURL=desktop-obra.css.map */
+@media screen and (max-width: 700px){
+}
