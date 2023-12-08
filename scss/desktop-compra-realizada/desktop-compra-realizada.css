@@ -7,9 +7,10 @@
   width: 70%;
   height: 50%;
 }
+
 .felicidades-su-compra {
   position: absolute;
-  top: 42%; 
+  top: 42%;
   left: 25%;
   width: 50%;
 }
@@ -23,6 +24,7 @@
 .button:hover {
   color: var(--color-darkgoldenrod);
 }
+
 .ok-button {
   position: absolute;
   top: 62%;
@@ -35,11 +37,12 @@
   height: 5%;
   box-sizing: border-box;
   align-items: center;
-  
 }
+
 .descargar-icon {
   width: 12%;
 }
+
 .descargar-button {
   position: absolute;
   top: 55%;
@@ -55,10 +58,12 @@
   gap: var(--gap-5xs);
   cursor: pointer;
 }
+
 .navText {
   line-height: 18px;
   cursor: pointer;
 }
+
 .section {
   position: absolute;
   top: 46px;
@@ -75,6 +80,7 @@
   width: 25px;
   height: 25px;
 }
+
 .logo-icon {
   position: absolute;
   object-fit: cover;
@@ -83,6 +89,7 @@
   width: 143px;
   height: 110px;
 }
+
 .logo-texto {
   position: absolute;
   object-fit: cover;
@@ -91,6 +98,7 @@
   width: 315px;
   height: 109px;
 }
+
 .header-section {
   position: relative;
   left: 0;
@@ -101,6 +109,7 @@
   font-size: var(--font-size-9xl);
   font-family: var(--font-playfair-display);
 }
+
 .desktop-comprarealizada {
   position: relative;
   background-color: var(--neutral-colors-white);
@@ -112,6 +121,9 @@
   color: var(--neutral-colors-white);
   font-family: var(--font-playfair-display);
 }
-.header-line-hr{
+
+.header-line-hr {
   top: 100px;
 }
+
+/*# sourceMappingURL=desktop-compra-realizada.css.map */
