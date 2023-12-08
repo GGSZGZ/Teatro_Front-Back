@@ -115,7 +115,6 @@
   background-color: var(--neutral-colors-white);
   width: 100%;
   height: 900px;
-  overflow: hidden;
   text-align: center;
   font-size: var(--font-size-9xl);
   color: var(--neutral-colors-white);
@@ -127,3 +126,39 @@
 }
 
 /*# sourceMappingURL=desktop-compra-realizada.css.map */
+/*Dimensiones creadas en iPhone 14 Pro Max*/
+@media screen and (max-width: 432px){
+  .header-section{
+    display:flex;
+    width: 742px;
+  }
+  .header-line-hr{
+    width: 740px;
+  }
+  .busqueda-icon{
+    left: 700px;
+  }
+  .logo-texto{
+    display:none;
+  }
+  .desktop-comprarealizada-child{
+    left: 160px;
+    height: 70%;
+    width: 100%;
+  }
+  .felicidades-su-compra{
+    left: 63%;
+  }
+  .icon-circle-check{
+    left: 75%;
+  }
+  .descargar-button{
+    top: 73%;
+    left: 63%;
+    width: 50%;
+  }
+  .ok-button{
+    top: 80%;
+    left: 78%;
+  }
+}
