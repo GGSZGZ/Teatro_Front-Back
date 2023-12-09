@@ -896,6 +896,7 @@
   background-color: var(--color-gray);
   width: 1182px;
   height: 579px;
+  border-radius: var(--br-24xl);
 }
 
 .butaca {
@@ -1029,7 +1030,6 @@
   background-color: var(--neutral-colors-white);
   width: 1182px;
   height: 579px;
-  
   max-width: 90%;
   max-height: 90%;
   text-align: center;
@@ -1045,7 +1045,7 @@
 
 .footer-line-hr {
   bottom: -2600px;
-  width: 140%;
+  width: 100%;
 }
 
 .botonera {
@@ -1323,5 +1323,32 @@ th {
   }
   .same-gender{
     width: 90%;
+  }
+  .desktop-popup{
+    transform: scale(0.5);
+    left: -80px;
+  }
+  .sala-cine{
+    left: 140px;
+  }
+  .rectangle-div{
+    width: 840px;
+    height: 1000px;
+  }
+  .butaca-fila-n32-container{
+    top:501px;
+    left: 50px;
+  }
+  .entradas-seleccionadas0-impor-container{
+    top: 880px;
+    left:50px;
+  }
+  .master-primary-button9{
+    top: 700px;
+    left: 500px;
+  }
+  .master-primary-button10{
+    top: 800px;
+    left:500px;
   }
 }

@@ -471,6 +471,17 @@
   width: 315px;
   height: 109px;
 }
+.logosolo-texto-2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 143px;
+  height: 110px;
+  object-fit: cover;
+  left: 143px;
+  width: 315px;
+  height: 109px;
+}
 
 .logo {
   position: absolute;
@@ -778,7 +789,6 @@
   background-color: var(--color-maroon);
   width: 100%;
   height: 4100px;
-  overflow: hidden;
   text-align: center;
   font-size: var(--font-size-25xl);
   color: var(--color-goldenrod);
@@ -794,3 +804,77 @@
 }
 
 /*# sourceMappingURL=desktop-index.css.map */
+
+@media screen and (max-width: 700px){
+  .actualmente{
+    display: none;
+  }
+  .logosolo-texto-1{
+    display: none;
+  }
+  .logo{
+    width: 143px;
+  }
+  .sections{
+    transform: scale(0.7);
+    right: 20px;
+  }
+  .busqueda-1-icon{
+    left:92%;
+  }
+  .heading{
+    left:110px;
+  }
+  .carrusel{
+    top:80px;
+    left: -60px;
+    transform: scale(0.7);
+    width:500px
+  }
+  .carrusel-text{
+    left: 297px;
+  }
+  .heading1{
+    top: 500px;
+    left: 8px;
+  }
+  .grip{
+    left: 5px;
+    top:685px;
+    width: 400px;
+  }
+  .grip-cards, .grip-cards1{
+    width:400px;
+  }
+  .card2, .card3, .card4, .card5{
+    display: none;
+  }
+  #calendar{
+    top: 2800px;
+    margin-left: 3.5%;
+    width:400px;
+  }
+  .footer{
+    top: 3751px;
+  }
+  .logo1{
+    transform: scale(0.5);
+    margin-left: -9%;
+    top: 0px;
+  }
+  .social-media{
+    transform: scale(0.8);
+    top:95px;
+    margin-left: 20%;
+  }
+  .copyright{
+    top:-40px;
+    left: 0px;
+    width:350px;
+  }
+  .divider{
+    top:-50px;
+    width: 350px;
+    left:0px;
+  }
+}
