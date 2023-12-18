@@ -24,7 +24,7 @@ app.get('/listObra', (req, res) => {
 
 
 app.get('/tickets', (req, res) => {
-  res.send("OK");
+  res.send(tickets);
 });
 
 // Ruta para manejar los datos del formulario
