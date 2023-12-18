@@ -32,31 +32,43 @@ addClickEvent("carrusel", "./desktop-obra.html");
 const listObra = document.querySelector("#calendar");
 // Realizar la solicitud GET al servidor
 let listadoRespuesta=[];
-fetch("http://localhost:3000/listObra", {
-  method: "GET",
-  headers: {
-    "Content-Type": "text/plain",
-  },
-})
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+fetch("http://localhost:3000/listObras", {
+     method: "GET",
+     headers: {
+       "Content-Type": "application/json",
+     }
+   })
+     .then((response) => {
+       if (!response.ok) {
+         throw new Error(`HTTP error! Status: ${response.status}`);
+       }
+       return response.json();
+     })
+     .then((data) => {
+      construirHome(data);
+      
+     })
+     .catch((error) => {
+       console.error(error);
+     });
+
+     function construirHome(data){
+
+      for (var i = 0; i < 12; i++) {
+        // Obtén el elemento por su ID
+        var title = document.getElementById("title-" + (i+1));
+        title.textContent=data[i].title.toUpperCase();
+        var desc = document.getElementById("description-" + (i+1));
+        desc.textContent=data[i].descripcion;
+        var img = document.getElementById("img-" + (i+1));
+        img.src=data[i].avatarUrl;
     }
-    return response.text();
-  })
-  .then((data) => {
-    const listadoRespuestaRaw = data.split(',');
-    listadoRespuesta=listadoRespuestaRaw;
-    cargarCalendario(listadoRespuesta);
-  })
-  .catch((error) => {
-    console.error("Error en la solicitud GET:", error);
-  });
+     }
 
 
 
 //calendario
- function cargarCalendario(listadoRespuesta) {
+
   
   var actual = new Date();
   var year = actual.getFullYear();
@@ -92,9 +104,9 @@ fetch("http://localhost:3000/listObra", {
         var nombreDia = diasSemana[fecha.getDay()];
         if (dia === actual.getDate() && month === actual.getMonth() + 1 && year === actual.getFullYear())
         
-          resultado += "<td class='hoy'>" + nombreDia + " " + dia +" "+obraAleatoria+"</td>";
+          resultado += "<td class='hoy'>" + nombreDia + " " + dia +" "+"</td>";
         else
-          resultado += "<td>" + nombreDia + " " + dia +" "+obraAleatoria+ "</td>";
+          resultado += "<td>" + nombreDia + " " + dia +" "+ "</td>";
         dia++;
       }
 
@@ -111,7 +123,7 @@ fetch("http://localhost:3000/listObra", {
     document.getElementById("calendar").getElementsByTagName("caption")[0].innerHTML = "<div>" + meses[month - 1] + " / " + year + "</div>";
     document.getElementById("calendar").getElementsByTagName("tbody")[0].innerHTML = resultado;
   }
-}
+
 
 
 
