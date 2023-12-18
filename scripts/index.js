@@ -29,8 +29,35 @@ for (var id in socialMediaLinks) {
 
 addClickEvent("carrusel", "./desktop-obra.html");
 
+const listObra = document.querySelector("#calendar");
+// Realizar la solicitud GET al servidor
+let listadoRespuesta=[];
+fetch("http://localhost:3000/listObra", {
+  method: "GET",
+  headers: {
+    "Content-Type": "text/plain",
+  },
+})
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.text();
+  })
+  .then((data) => {
+    const listadoRespuestaRaw = data.split(',');
+    listadoRespuesta=listadoRespuestaRaw;
+    cargarCalendario(listadoRespuesta);
+  })
+  .catch((error) => {
+    console.error("Error en la solicitud GET:", error);
+  });
+
+
+
 //calendario
-document.addEventListener("DOMContentLoaded", function () {
+ function cargarCalendario(listadoRespuesta) {
+  
   var actual = new Date();
   var year = actual.getFullYear();
   var month = actual.getMonth() + 1;
@@ -58,12 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
       if (i < primerDiaSemana || i >= last_cell) {
         resultado += "<td>&nbsp;</td>";
       } else {
+        
+       
+        const obraAleatoria=listadoRespuesta[Math.round(Math.random()*10+1)];
         var fecha = new Date(year, month - 1, dia);
         var nombreDia = diasSemana[fecha.getDay()];
         if (dia === actual.getDate() && month === actual.getMonth() + 1 && year === actual.getFullYear())
-          resultado += "<td class='hoy'>" + nombreDia + " " + dia + "</td>";
+        
+          resultado += "<td class='hoy'>" + nombreDia + " " + dia +" "+obraAleatoria+"</td>";
         else
-          resultado += "<td>" + nombreDia + " " + dia + "</td>";
+          resultado += "<td>" + nombreDia + " " + dia +" "+obraAleatoria+ "</td>";
         dia++;
       }
 
@@ -80,7 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("calendar").getElementsByTagName("caption")[0].innerHTML = "<div>" + meses[month - 1] + " / " + year + "</div>";
     document.getElementById("calendar").getElementsByTagName("tbody")[0].innerHTML = resultado;
   }
-});
+}
+
+
+
 
 
 

@@ -172,3 +172,28 @@ addClickEvent("socialMediaIconSquare1", "https://twitter.com/",true);
 crearSalaDeCine(6, 6);
 
 
+const detalleObra = document.querySelector(".sinopsis-text");
+// Realizar la solicitud GET al servidor
+
+fetch("http://localhost:3000/obra", {
+  method: "GET",
+  headers: {
+    "Content-Type": "text/plain",
+  },
+})
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.text();
+  })
+  .then((data) => {
+    detalleObra.textContent = data;
+  })
+  .catch((error) => {
+    console.error("Error en la solicitud GET:", error);
+  });
+
+
+
+
