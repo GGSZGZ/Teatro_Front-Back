@@ -29,8 +29,47 @@ for (var id in socialMediaLinks) {
 
 addClickEvent("carrusel", "./desktop-obra.html");
 
+const listObra = document.querySelector("#calendar");
+// Realizar la solicitud GET al servidor
+let listadoRespuesta=[];
+fetch("http://localhost:3000/listObras", {
+     method: "GET",
+     headers: {
+       "Content-Type": "application/json",
+     }
+   })
+     .then((response) => {
+       if (!response.ok) {
+         throw new Error(`HTTP error! Status: ${response.status}`);
+       }
+       return response.json();
+     })
+     .then((data) => {
+      construirHome(data);
+      
+     })
+     .catch((error) => {
+       console.error(error);
+     });
+
+     function construirHome(data){
+
+      for (var i = 0; i < 12; i++) {
+        // Obtén el elemento por su ID
+        var title = document.getElementById("title-" + (i+1));
+        title.textContent=data[i].title.toUpperCase();
+        var desc = document.getElementById("description-" + (i+1));
+        desc.textContent=data[i].descripcion;
+        var img = document.getElementById("img-" + (i+1));
+        img.src=data[i].avatarUrl;
+    }
+     }
+
+
+
 //calendario
-document.addEventListener("DOMContentLoaded", function () {
+
+  
   var actual = new Date();
   var year = actual.getFullYear();
   var month = actual.getMonth() + 1;
@@ -58,12 +97,16 @@ document.addEventListener("DOMContentLoaded", function () {
       if (i < primerDiaSemana || i >= last_cell) {
         resultado += "<td>&nbsp;</td>";
       } else {
+        
+       
+        const obraAleatoria=listadoRespuesta[Math.round(Math.random()*10+1)];
         var fecha = new Date(year, month - 1, dia);
         var nombreDia = diasSemana[fecha.getDay()];
         if (dia === actual.getDate() && month === actual.getMonth() + 1 && year === actual.getFullYear())
-          resultado += "<td class='hoy'>" + nombreDia + " " + dia + "</td>";
+        
+          resultado += "<td class='hoy'>" + nombreDia + " " + dia +" "+"</td>";
         else
-          resultado += "<td>" + nombreDia + " " + dia + "</td>";
+          resultado += "<td>" + nombreDia + " " + dia +" "+ "</td>";
         dia++;
       }
 
@@ -80,7 +123,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("calendar").getElementsByTagName("caption")[0].innerHTML = "<div>" + meses[month - 1] + " / " + year + "</div>";
     document.getElementById("calendar").getElementsByTagName("tbody")[0].innerHTML = resultado;
   }
-});
+
+
+
+
 
 
 
