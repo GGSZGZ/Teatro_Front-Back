@@ -11,6 +11,22 @@ function addClickEvent(id, url, openNewWindow) {
   }
 }
 
+let idObraClick = 0;
+document.addEventListener('DOMContentLoaded', function () {
+  // Agregar eventListener a cada elemento con id que sigue el patrón "card-i"
+  for (let i = 1; i <= 12; i++) {
+      let elementId = 'card-' + i;
+      let element = document.getElementById(elementId);
+
+      if (element) {
+          element.addEventListener('click', function () {
+              idObraClick=i;
+              localStorage.setItem('idObra', idObraClick);
+          });
+      }
+  }
+});
+
 addClickEvent("about", "./desktop-about-us.html");
 addClickEvent("contact", "./desktop-contactos.html");
 addClickEvent("grip", "./desktop-obra.html");

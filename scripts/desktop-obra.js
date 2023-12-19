@@ -55,13 +55,14 @@ function addPopupClickEvent(buttonId) {
 }
 var importe;
 var cantidadAsientos;
+let asientosOcupados = [];
 // Función para crear la sala de cine
 function crearSalaDeCine(filas, columnas) {
   var salaCine = document.getElementById('sala-cine');
   var cantidad = document.getElementById('cantidad');
   var precio = document.getElementById('importe');
   
-
+  var asientosSeleccionadosArray = [];
   for (var fila = 1; fila <= filas; fila++) {
       for (var columna = 1; columna <= columnas; columna++) {
           var asiento = document.createElement('div');
@@ -69,9 +70,13 @@ function crearSalaDeCine(filas, columnas) {
           asiento.textContent = fila + '-' + columna;
 
           // Simulando algunos asientos ocupados
-          if (fila === 2 && columna === 3 || fila === 4 && columna === 5 || fila === 6 && columna === 1) {
+          asientosOcupados.forEach(element => {
+            console.log(element);
+            if (fila*columna==element+1) {
               asiento.classList.add('asiento-ocupado');
-          }
+            }
+          });
+          
 
           salaCine.appendChild(asiento);
 
@@ -93,15 +98,19 @@ function crearSalaDeCine(filas, columnas) {
                   var asientosSeleccionados = document.getElementById('asientosSeleccionados');   
                   var filasExistentes = asientosSeleccionados.getElementsByTagName('tr');
                   var filaExistente = Array.from(filasExistentes).find(function (fila) {
+                      
                       return fila.cells[0].textContent.includes(numeroFila) && fila.cells[1].textContent.includes(numeroColumna);
                   });
                   if (filaExistente) {
                     // Si la fila existe, eliminarla de la tabla
                     asientosSeleccionados.removeChild(filaExistente);
+                    var indice = asientosSeleccionadosArray.indexOf(numeroFila*numeroColumna);
+                    asientosSeleccionadosArray.splice(indice,1);
                     importe -= 25;
                     cantidad.textContent = "ENTRADAS SELECCIONADAS: "+asientosSeleccionadosImage.length;
                     precio.textContent = "IMPORTE TOTAL: "+importe+ "€";
                 } else {
+                    asientosSeleccionadosArray.push(numeroFila*numeroColumna);
                     var nuevaFila = asientosSeleccionados.insertRow();
                     var filas = nuevaFila.insertCell(0);
                     var columnas = nuevaFila.insertCell(1);
@@ -111,9 +120,12 @@ function crearSalaDeCine(filas, columnas) {
                     cantidad.textContent = "ENTRADAS SELECCIONADAS: "+asientosSeleccionadosImage.length;
                     precio.textContent = "IMPORTE TOTAL: "+importe+ "€";
                 }
+                console.log(asientosOcupados);
                 cantidadAsientos=asientosSeleccionadosImage.length;
+                asientosOcupados=asientosOcupados.concat(asientosSeleccionadosArray);
                 localStorage.setItem('importe', importe);
                 localStorage.setItem('cantidadAsientos', cantidadAsientos);
+                localStorage.setItem('asientosOcupados', asientosOcupados);
             }
           });
           
@@ -175,7 +187,41 @@ crearSalaDeCine(6, 6);
 const detalleObra = document.querySelector(".sinopsis-text");
 // Realizar la solicitud GET al servidor
 
-fetch("http://localhost:3000/sinopsis", {
+
+var idObra=localStorage.getItem('idObra');
+fetch(`http://localhost:3000/sinopsis/${idObra}`, {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  }
+})
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.text();
+  })
+  .then((data) => {
+    construirDescripcion(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+
+
+
+     function construirDescripcion(data){
+      //sacara un nulo en caso de elegir otra obra que no sea la primera porque solo tenemos sinopsis-1 , ya que no tenemos las otras obras, teniendolos haria todas correctamente
+        // var des = document.getElementById("sinopsis-" + idObra);
+        //la forma correcta es la de arriba pero hago esto para que se cambie en la misma la sinopsis dependiendo de la obra que se elija
+        var des = document.getElementById("sinopsis-1");
+        des.textContent=data;
+  }
+  
+  let id = localStorage.getItem('idObra');
+  //GET ASIENTOS
+  fetch("http://localhost:3000/listObras", {
      method: "GET",
      headers: {
        "Content-Type": "application/json",
@@ -188,23 +234,19 @@ fetch("http://localhost:3000/sinopsis", {
        return response.json();
      })
      .then((data) => {
-      construirDescripcion(data);
-      
+      adquirirAsientos(data);
      })
      .catch((error) => {
        console.error(error);
      });
 
-
-
-
-     function construirDescripcion(data){
+     function adquirirAsientos(data){
       for (var i = 0; i < 12; i++) {
         // Obtén el elemento por su ID
         //como solo tenemos una obra hago un break al hacer la primera y ya
-        var des = document.getElementById("sinopsis-" + (i+1));
-        des.textContent=data[i];
-        //solo porque tenemos una única obra para que no de error
-        break;
+        if(id == data[i].idObra){
+          asientosOcupados=(data[i].asientos.split(',')).map(Number);
+          break;
+        }
     }
-     }
+  }
