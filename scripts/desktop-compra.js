@@ -30,6 +30,8 @@ document.getElementById('horarioFin').textContent = horario;
 
 var importe = localStorage.getItem('importe');
 var cantidadAsientos = localStorage.getItem('cantidadAsientos');
+var cantAsientosOcupados= localStorage.getItem('asientosOcupados');
+var idObraSubir = localStorage.getItem('idObra');
 importe +="€";
 document.getElementById('importe').textContent = importe;
 document.getElementById('cantidadAss').textContent = cantidadAsientos;
@@ -58,7 +60,10 @@ document.getElementById("compraRealizadaContainer1").addEventListener("click",()
      importe,
      cantidadAsientos,
    };
-
+   const obra = {
+    idObraSubir,
+    cantAsientosOcupados,
+   };
    // Realizar la solicitud POST al servidor
    fetch("http://localhost:3000/tickets", {
      method: "POST",
@@ -78,6 +83,23 @@ document.getElementById("compraRealizadaContainer1").addEventListener("click",()
        // Realizar cualquier acción adicional después de una compra exitosa
        document.getElementById("form").reset(); // Vaciar los campos del formulario
        window.location.href = "./desktop-compra-realizada.html"; // Redirigir a la página de compra realizada
+     })
+     .catch((error) => {
+       console.error("Error en la solicitud POST:", error);
+     });
+     //POST ASIENTOS
+  fetch("http://localhost:3000/listObras", {
+     method: "POST",
+     headers: {
+       "Content-Type": "application/json",
+     },
+     body: JSON.stringify(obra),
+     })
+     .then((response) => {
+       if (!response.ok) {
+         throw new Error(`HTTP error! Status: ${response.status}`);
+       }
+       return response.json();
      })
      .catch((error) => {
        console.error("Error en la solicitud POST:", error);

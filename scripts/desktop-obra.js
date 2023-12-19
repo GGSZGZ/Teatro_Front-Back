@@ -55,13 +55,14 @@ function addPopupClickEvent(buttonId) {
 }
 var importe;
 var cantidadAsientos;
+let asientosOcupados = [];
 // Función para crear la sala de cine
 function crearSalaDeCine(filas, columnas) {
   var salaCine = document.getElementById('sala-cine');
   var cantidad = document.getElementById('cantidad');
   var precio = document.getElementById('importe');
   
-
+  var asientosSeleccionadosArray = [];
   for (var fila = 1; fila <= filas; fila++) {
       for (var columna = 1; columna <= columnas; columna++) {
           var asiento = document.createElement('div');
@@ -69,9 +70,12 @@ function crearSalaDeCine(filas, columnas) {
           asiento.textContent = fila + '-' + columna;
 
           // Simulando algunos asientos ocupados
-          if (fila === 2 && columna === 3 || fila === 4 && columna === 5 || fila === 6 && columna === 1) {
+          asientosOcupados.forEach(element => {
+            if (fila*columna==element+1) {
               asiento.classList.add('asiento-ocupado');
-          }
+            }
+          });
+          
 
           salaCine.appendChild(asiento);
 
@@ -93,15 +97,19 @@ function crearSalaDeCine(filas, columnas) {
                   var asientosSeleccionados = document.getElementById('asientosSeleccionados');   
                   var filasExistentes = asientosSeleccionados.getElementsByTagName('tr');
                   var filaExistente = Array.from(filasExistentes).find(function (fila) {
+                      
                       return fila.cells[0].textContent.includes(numeroFila) && fila.cells[1].textContent.includes(numeroColumna);
                   });
                   if (filaExistente) {
                     // Si la fila existe, eliminarla de la tabla
                     asientosSeleccionados.removeChild(filaExistente);
+                    var indice = asientosSeleccionadosArray.indexOf(numeroFila*numeroColumna);
+                    asientosSeleccionadosArray.splice(indice,1);
                     importe -= 25;
                     cantidad.textContent = "ENTRADAS SELECCIONADAS: "+asientosSeleccionadosImage.length;
                     precio.textContent = "IMPORTE TOTAL: "+importe+ "€";
                 } else {
+                    asientosSeleccionadosArray.push(numeroFila*numeroColumna);
                     var nuevaFila = asientosSeleccionados.insertRow();
                     var filas = nuevaFila.insertCell(0);
                     var columnas = nuevaFila.insertCell(1);
@@ -111,9 +119,12 @@ function crearSalaDeCine(filas, columnas) {
                     cantidad.textContent = "ENTRADAS SELECCIONADAS: "+asientosSeleccionadosImage.length;
                     precio.textContent = "IMPORTE TOTAL: "+importe+ "€";
                 }
+                console.log(asientosOcupados);
                 cantidadAsientos=asientosSeleccionadosImage.length;
+                asientosOcupados=asientosOcupados.concat(asientosSeleccionadosArray);
                 localStorage.setItem('importe', importe);
                 localStorage.setItem('cantidadAsientos', cantidadAsientos);
+                localStorage.setItem('asientosOcupados', asientosOcupados);
             }
           });
           
@@ -207,4 +218,36 @@ fetch("http://localhost:3000/sinopsis", {
         //solo porque tenemos una única obra para que no de error
         break;
     }
+  }
+  
+  let id = localStorage.getItem('idObra');
+  //GET ASIENTOS
+  fetch("http://localhost:3000/listObras", {
+     method: "GET",
+     headers: {
+       "Content-Type": "application/json",
      }
+   })
+     .then((response) => {
+       if (!response.ok) {
+         throw new Error(`HTTP error! Status: ${response.status}`);
+       }
+       return response.json();
+     })
+     .then((data) => {
+      adquirirAsientos(data);
+     })
+     .catch((error) => {
+       console.error(error);
+     });
+
+     function adquirirAsientos(data){
+      for (var i = 0; i < 12; i++) {
+        // Obtén el elemento por su ID
+        //como solo tenemos una obra hago un break al hacer la primera y ya
+        if(id == data[i].idObra){
+          asientosOcupados=(data[i].asientos.split(',')).map(Number);
+          break;
+        }
+    }
+  }

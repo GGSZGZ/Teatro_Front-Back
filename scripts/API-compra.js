@@ -26,6 +26,17 @@ let obras=[];
 app.get('/listObras', (req, res) => {
   res.send(obras);
 });
+
+app.post('/listObras', (req, res) =>{
+  const obra = req.body;
+  const id = obra.idObraSubir;
+  const asientos = obra.cantAsientosOcupados;
+  for(let i = 0; i<12; i++){
+    if(id==obras[i].idObra){
+      obras[i].asientos = asientos;
+    }
+  }
+});
 app.get('/sinopsis', (req, res) => {
   res.send(obras.map((obra) => obra.sinopsis));
 });
@@ -42,13 +53,6 @@ function init(){
       })
   }
 }
-
-
-
-
-
-
-
 
 app.get('/tickets', (req, res) => {
   res.send(tickets);
