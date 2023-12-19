@@ -1,15 +1,4 @@
-function addClickEvent(id, url, openInNewWindow = false) {
-  var element = document.getElementById(id);
-  if (element) {
-    element.addEventListener("click", function () {
-      if (openInNewWindow) {
-        window.open(url, "_blank");
-      } else {
-        window.location.href = url;
-      }
-    });
-  }
-}
+
 
 var horario;
 function addPopupClickEvent(buttonId) {
@@ -56,6 +45,39 @@ function addPopupClickEvent(buttonId) {
 var importe;
 var cantidadAsientos;
 let asientosOcupados = [];
+let id = localStorage.getItem('idObra');
+  //GET ASIENTOS
+  fetch("http://localhost:3000/listObras", {
+     method: "GET",
+     headers: {
+       "Content-Type": "application/json",
+     }
+   })
+     .then((response) => {
+       if (!response.ok) {
+         throw new Error(`HTTP error! Status: ${response.status}`);
+       }
+       return response.json();
+     })
+     .then((data) => {
+      adquirirAsientos(data);
+      crearSalaDeCine(6, 6);
+     })
+     .catch((error) => {
+       console.error(error);
+       crearSalaDeCine(6, 6);
+     });
+
+     function adquirirAsientos(data){
+      for (var i = 0; i < 12; i++) {
+        // Obtén el elemento por su ID
+        //como solo tenemos una obra hago un break al hacer la primera y ya
+        if(id == data[i].idObra){
+          asientosOcupados=(data[i].asientos.split(',')).map(Number);
+          break;
+        }
+    }
+  }
 // Función para crear la sala de cine
 function crearSalaDeCine(filas, columnas) {
   var salaCine = document.getElementById('sala-cine');
@@ -69,14 +91,12 @@ function crearSalaDeCine(filas, columnas) {
           asiento.classList.add('asiento');
           asiento.textContent = fila + '-' + columna;
 
-          // Simulando algunos asientos ocupados
-          asientosOcupados.forEach(element => {
-            console.log(element);
-            if (fila*columna==element+1) {
-              asiento.classList.add('asiento-ocupado');
-            }
-          });
           
+          var indiceAsiento = (fila - 1) * columnas + columna;
+
+          if (asientosOcupados.includes(indiceAsiento)) {
+            asiento.classList.add('asiento-ocupado');
+          }
 
           salaCine.appendChild(asiento);
 
@@ -104,13 +124,13 @@ function crearSalaDeCine(filas, columnas) {
                   if (filaExistente) {
                     // Si la fila existe, eliminarla de la tabla
                     asientosSeleccionados.removeChild(filaExistente);
-                    var indice = asientosSeleccionadosArray.indexOf(numeroFila*numeroColumna);
+                    var indice = asientosSeleccionadosArray.indexOf((numeroFila - 1) * columna + (numeroColumna-numeroFila)+1);
                     asientosSeleccionadosArray.splice(indice,1);
                     importe -= 25;
                     cantidad.textContent = "ENTRADAS SELECCIONADAS: "+asientosSeleccionadosImage.length;
                     precio.textContent = "IMPORTE TOTAL: "+importe+ "€";
                 } else {
-                    asientosSeleccionadosArray.push(numeroFila*numeroColumna);
+                    asientosSeleccionadosArray.push((numeroFila - 1) * columna + (numeroColumna-numeroFila)+1);
                     var nuevaFila = asientosSeleccionados.insertRow();
                     var filas = nuevaFila.insertCell(0);
                     var columnas = nuevaFila.insertCell(1);
@@ -120,16 +140,33 @@ function crearSalaDeCine(filas, columnas) {
                     cantidad.textContent = "ENTRADAS SELECCIONADAS: "+asientosSeleccionadosImage.length;
                     precio.textContent = "IMPORTE TOTAL: "+importe+ "€";
                 }
-                console.log(asientosOcupados);
                 cantidadAsientos=asientosSeleccionadosImage.length;
-                asientosOcupados=asientosOcupados.concat(asientosSeleccionadosArray);
+                console.log(asientosSeleccionadosArray);
                 localStorage.setItem('importe', importe);
                 localStorage.setItem('cantidadAsientos', cantidadAsientos);
-                localStorage.setItem('asientosOcupados', asientosOcupados);
+                localStorage.setItem('asientosArray', asientosSeleccionadosArray)
             }
           });
           
+          
       }
+  }
+}
+function addClickEvent(id, url, openInNewWindow = false) {
+  var element = document.getElementById(id);
+  if (element) {
+    element.addEventListener("click", function () {
+      if(id=="popupmasterPrimaryButton"){
+        var asientosFinales = localStorage.getItem('asientosArray');
+        asientosOcupados=asientosOcupados.concat(asientosFinales);
+        localStorage.setItem('asientosOcupados', asientosOcupados);
+      }
+      if (openInNewWindow) {
+        window.open(url, "_blank");
+      } else {
+        window.location.href = url;
+      }
+    });
   }
 }
 
@@ -180,8 +217,7 @@ addClickEvent("socialMediaIconSquare", "https://www.facebook.com/", true);
 addClickEvent("socialMediaContainer", "https://www.instagram.com/",true);
 addClickEvent("socialMediaIconSquare1", "https://twitter.com/",true);
 
-// Llama a la función para crear la sala de cine
-crearSalaDeCine(6, 6);
+
 
 
 const detalleObra = document.querySelector(".sinopsis-text");
@@ -218,35 +254,4 @@ fetch(`http://localhost:3000/sinopsis/${idObra}`, {
         var des = document.getElementById("sinopsis-1");
         des.textContent=data;
   }
-  
-  let id = localStorage.getItem('idObra');
-  //GET ASIENTOS
-  fetch("http://localhost:3000/listObras", {
-     method: "GET",
-     headers: {
-       "Content-Type": "application/json",
-     }
-   })
-     .then((response) => {
-       if (!response.ok) {
-         throw new Error(`HTTP error! Status: ${response.status}`);
-       }
-       return response.json();
-     })
-     .then((data) => {
-      adquirirAsientos(data);
-     })
-     .catch((error) => {
-       console.error(error);
-     });
 
-     function adquirirAsientos(data){
-      for (var i = 0; i < 12; i++) {
-        // Obtén el elemento por su ID
-        //como solo tenemos una obra hago un break al hacer la primera y ya
-        if(id == data[i].idObra){
-          asientosOcupados=(data[i].asientos.split(',')).map(Number);
-          break;
-        }
-    }
-  }
