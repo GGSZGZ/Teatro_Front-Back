@@ -71,6 +71,7 @@ function crearSalaDeCine(filas, columnas) {
 
           // Simulando algunos asientos ocupados
           asientosOcupados.forEach(element => {
+            console.log(element);
             if (fila*columna==element+1) {
               asiento.classList.add('asiento-ocupado');
             }
@@ -186,38 +187,36 @@ crearSalaDeCine(6, 6);
 const detalleObra = document.querySelector(".sinopsis-text");
 // Realizar la solicitud GET al servidor
 
-fetch("http://localhost:3000/sinopsis", {
-     method: "GET",
-     headers: {
-       "Content-Type": "application/json",
-     }
-   })
-     .then((response) => {
-       if (!response.ok) {
-         throw new Error(`HTTP error! Status: ${response.status}`);
-       }
-       return response.json();
-     })
-     .then((data) => {
-      construirDescripcion(data);
-      
-     })
-     .catch((error) => {
-       console.error(error);
-     });
+
+var idObra=localStorage.getItem('idObra');
+fetch(`http://localhost:3000/sinopsis/${idObra}`, {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  }
+})
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.text();
+  })
+  .then((data) => {
+    construirDescripcion(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 
 
 
      function construirDescripcion(data){
-      for (var i = 0; i < 12; i++) {
-        // Obtén el elemento por su ID
-        //como solo tenemos una obra hago un break al hacer la primera y ya
-        var des = document.getElementById("sinopsis-" + (i+1));
-        des.textContent=data[i];
-        //solo porque tenemos una única obra para que no de error
-        break;
-    }
+      //sacara un nulo en caso de elegir otra obra que no sea la primera porque solo tenemos sinopsis-1 , ya que no tenemos las otras obras, teniendolos haria todas correctamente
+        // var des = document.getElementById("sinopsis-" + idObra);
+        //la forma correcta es la de arriba pero hago esto para que se cambie en la misma la sinopsis dependiendo de la obra que se elija
+        var des = document.getElementById("sinopsis-1");
+        des.textContent=data;
   }
   
   let id = localStorage.getItem('idObra');

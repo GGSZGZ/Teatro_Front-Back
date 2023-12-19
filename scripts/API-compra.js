@@ -1,6 +1,7 @@
 const express = require('express');
 const { faker }=require('@faker-js/faker')
 const cors = require('cors');
+const fs = require('fs');
 
 const app = express();
 const port = 3000;
@@ -31,28 +32,53 @@ app.post('/listObras', (req, res) =>{
   const obra = req.body;
   const id = obra.idObraSubir;
   const asientos = obra.cantAsientosOcupados;
-  for(let i = 0; i<12; i++){
-    if(id==obras[i].idObra){
-      obras[i].asientos = asientos;
-    }
-  }
+
+  obras[id-1].asientos = asientos;
+
+  // for(let i = 0; i<12; i++){
+  //   if(id==obras[i].idObra){
+  //     obras[i].asientos = asientos;
+  //   }
+  // }
 });
-app.get('/sinopsis', (req, res) => {
-  res.send(obras.map((obra) => obra.sinopsis));
+app.get('/sinopsis/:id', (req, res) => {
+  const obra = obras.find(element => element.idObra == req.params.id);
+  if (obra) {
+    res.send(obra.sinopsis);
+  } else {
+    res.status(404).send('Obra no encontrada');
+  }
 });
 //obras
 function init(){
-  for(let i =0;i<12;i++){
-    obras.push({
-          idObra:(i+1),
-          avatarUrl: faker.image.avatar() ,
-          title: faker.lorem.words(1),
-          descripcion : faker.lorem.paragraph(),
-          sinopsis: faker.lorem.paragraphs(5),
+ 
+  fs.readFile("obras.json", 'utf8', (error, data) => {
+    if (error) {
+      console.error(`Error al leer el archivo JSON: ${error.message}`);
+      return;
+    }
+
+    try {
+      // Parseamos el contenido del archivo JSON
+      const jsonData = JSON.parse(data);
+      // console.log(jsonData)
+
+      jsonData.forEach(obra => {
+        obras.push({
+          idObra: obra.idObra,
+          avatarUrl: obra.avatarUrl,
+          title: obra.title,
+          descripcion: obra.descripcion,
+          sinopsis: obra.sinopsis,
           asientos: []
-      })
-  }
+        });
+      });
+
+    } catch (parseError) {
+      console.error(`Error al parsear el contenido del archivo JSON: ${parseError.message}`);
 }
+  })
+  }
 
 app.get('/tickets', (req, res) => {
   res.send(tickets);
