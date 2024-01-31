@@ -70,7 +70,7 @@ fetch("http://localhost:3000/listObras", {
 
      function construirHome(data){
 
-      for (var i = 0; i < 12; i++) {
+      for (var i = 0; i < data.length; i++) {
         // Obtén el elemento por su ID
         var title = document.getElementById("title-" + (i+1));
         title.textContent=data[i].title.toUpperCase();
